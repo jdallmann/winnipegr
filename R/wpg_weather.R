@@ -4,7 +4,7 @@
 #' weather abstracting station names. Measurements can be
 #' converted to metric using \code{meathermetrics}
 #'
-#' @importFrom reim riem_measures
+#' @importFrom riem riem_measures
 #' @importFrom weathermetrics fahrenheit.to.celsius inches_to_metric
 #' @importFrom magrittr %>%
 #' @importFrom dplyr mutate rename
