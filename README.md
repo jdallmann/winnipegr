@@ -2,7 +2,7 @@
 
 This R package provides an abstraction layer for easily accessing openly available data sets for Winnipeg, MB, Canada. It includes the following functions for downloading data:
 
-    - `wpg_weather` for sourcing Winnipeg weather from stations from: Winnipeg 'CXWI', Winnipeg Forks 'CXWN', and Winnipeg International Airport 'CYWG'.
+- `wpg_weather` for sourcing Winnipeg weather from stations from: Winnipeg 'CXWI', Winnipeg Forks 'CXWN', and Winnipeg International Airport 'CYWG'.
 
 
 ## Installation
