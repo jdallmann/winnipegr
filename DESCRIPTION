@@ -1,11 +1,12 @@
 Package: winnipegr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: winnipeg open data aggregator
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Justin Dallmann
+Maintainer: Justin Dallmann <jdallmann@jdallmann.org>
+Description: This R package provides an abstraction layer 
+    for easily accessing openly available data sets for 
+    Winnipeg, MB, Canada.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
