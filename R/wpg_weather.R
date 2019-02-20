@@ -34,12 +34,12 @@ wpg_weather <- function(station = c("wpg", "forks", "airport"),
                         end = as.character(Sys.Date()),
                         metric = TRUE){
     station <- match.arg(station)
-    if(!require(riem)){
-        stop("the 'riem' package needs to be installed first")
+    if('riem' %in% rownames(installed.packages()) == FALSE){
+        stop("The 'riem' package needs to be installed first")
     }
 
-    if(!require(weathermetrics)){
-        stop("the 'weathermetrics' package needs to be installed first")
+    if('riem' %in% rownames(installed.packages()) == FALSE){
+        stop("The 'weathermetrics' package needs to be installed first")
     }
     if(station == "wpg"){
         station <- "CXWI"
