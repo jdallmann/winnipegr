@@ -1,4 +1,4 @@
-#' Winnipeg WPA Paystation
+#' Winnipeg WPA Paystations
 #'
 #' This function uses the \code{RSocrata} package to get Winnipeg
 #' WPA Paystation data from the Winnipeg Open Data site
