@@ -59,7 +59,8 @@ wpg_weather <- function(station = c("wpg", "forks", "airport"),
     if(metric == TRUE){
         weather <- weather %>%
             mutate(tmp = weathermetrics::fahrenheit.to.celsius(tmp),
-                   precip = weathermetrics::inches_to_metric(precip, unit = "mm"))
+                   precip = weathermetrics::inches_to_metric(precip,
+                                                             unit = "mm"))
 
     }
 
