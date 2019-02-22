@@ -31,7 +31,7 @@
 #' @param email Optional email parameter for users with a city
 #'     of Winnipeg Open Data account available at
 #'     (https://data.winnipeg.ca/)
-#' @param email Optional password parameter for users with a city
+#' @param password Optional password parameter for users with a city
 #'     of Winnipeg Open Data account available at
 #'     (https://data.winnipeg.ca/)
 #'
