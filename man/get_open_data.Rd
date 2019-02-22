@@ -20,7 +20,7 @@ of Winnipeg Open Data account available at
 of Winnipeg Open Data account available at
 (https://data.winnipeg.ca/)}
 
-\item{email}{Optional password parameter for users with a city
+\item{password}{Optional password parameter for users with a city
 of Winnipeg Open Data account available at
 (https://data.winnipeg.ca/)}
 }
