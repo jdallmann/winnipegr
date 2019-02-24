@@ -14,16 +14,24 @@
 #'     polling subdivision units (\code{"2018 polling geoms"}), air
 #'     quality data (\code{"air quality"}), taxation assessment parcels
 #'     (\code{"tax parcels"}), tree inventory (\code{"trees"}), building
-#'     permits (\code{building permits"}), snow plaw schedule
-#'     (\code{"plow schedule"), parking ban schedule (\code{"parking bans"}),
+#'     permits (\code{building permits"}), snow plow schedule
+#'     (\code{"plow schedule"}), parking ban schedule (\code{"parking bans"}),
 #'     parks and open space (\code{"parks"}), park asset inventory
 #'     (\code{"park assets"}), council member expenses
-#'     (\code{"council expenses"), (\code{"public notices"}), daily adult
+#'     (\code{"council expenses"}), (\code{"public notices"}), daily adult
 #'     mosquito trap data (\code{"mosquito traps"}), (\code{"address coords"}),
 #'     detailed building permit data (\code{"permit details"}), burial records
 #'     (\code{"burials"}), public meeting dispositions (\code{"dispositions"}),
 #'     311 service requests (\code{"311"}), lane closure
-#'     (\code{"lane closures"}).
+#'     (\code{"lane closures"}), by-law investigations (\code{"by-law"}),
+#'     recycling, garbage and yard waste collection days
+#'     (\code{"collection days"}), 311 interactions by channel
+#'     (\code{"311 channels"}), (\code{"school enrolments"}),
+#'     (\code{"river levels"}), residential garbage, recycling and yard waste
+#'     tonnage reports (\code{"waste tonnage"}), Winnipeg City open data
+#'     and website analytics (\code{"web analytics"}), James Avenue river
+#'     levels (\code{"river James"}), vehicle for hire contravention
+#'     (\code{"contravention"}).
 #'
 #' @param app_token Optional app_token parameter for users with a city
 #'     of Winnipeg Open Data account available at
@@ -90,8 +98,6 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "gnxp-9hpt"
     } else if(type == "mosquito traps"){
         datasetID <- "du7c-8488"
-    } else if(type == "mosquito traps"){
-        datasetID <- "du7c-8488"
     } else if(type == "address coords"){
         datasetID <- "w4xz-nc35"
     } else if(type == "permit details"){
@@ -102,10 +108,24 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "qevm-pxyq"
     } else if(type == "311"){
         datasetID <- "9w2n-uhf9"
-    } else if (type == "lane closures"){
-        datasetID <- "h367-iifg"
+    } else if (type == "by-law"){
+        datasetID <- "eye3-guud"
+    } else if (type == "collection days"){
+        datasetID <- "6rcy-9uik"
+    } else if (type == "311 channels"){
+        datasetID <- "485c-dk3k"
+    } else if (type == "school enrolments"){
+        datasetID <- "ukha-ify8"
+    } else if (type == "river levels"){
+        datasetID <- "tgrf-v2zc"
+    } else if (type == "waste tonnage"){
+        datasetID <- "fgza-8s5e"
+    } else if (type == "river James"){
+        datasetID <- "q8w3-jhjb"
+    } else if (type == "contravention"){
+        datasetID <- "rzfe-3um4"
     } else{
-        stop()
+        datasetID <- type
     }
 
 

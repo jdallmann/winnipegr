@@ -24,7 +24,7 @@ hourly Winnipeg weather data set including precipitation
 \description{
 This function uses the \code{reim} package to load Winnipeg
 weather abstracting station names. Measurements can be
-converted to metric using \code{meathermetrics}
+converted to metric using \code{meathermetrics}.
 }
 \examples{
 \dontrun{

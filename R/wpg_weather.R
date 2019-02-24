@@ -2,7 +2,7 @@
 #'
 #' This function uses the \code{reim} package to load Winnipeg
 #' weather abstracting station names. Measurements can be
-#' converted to metric using \code{meathermetrics}
+#' converted to metric using \code{meathermetrics}.
 #'
 #' @importFrom riem riem_measures
 #' @importFrom weathermetrics fahrenheit.to.celsius inches_to_metric
