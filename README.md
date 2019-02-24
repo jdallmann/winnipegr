@@ -34,9 +34,10 @@ This R package provides an abstraction layer for easily accessing openly availab
     + "river James"
     + "contravention".
 
-It also contains certain internal fixed data sets. For example:
+It also contains certain internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 
-- `transport_mode`---Mode Of transportation data from Statistics Canada's 2016 Census. [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv)
+- `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv)
+
 
 ## Installation
 
