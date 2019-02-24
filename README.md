@@ -56,7 +56,7 @@ The package also contains certain internal fixed data sets. Load these data sets
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
 
 
-## Examlpes
+## Examples
 ### `wpg_weather`
 This function uses the \code{reim} package to load Winnipeg
 weather abstracting station names. Measurements can be
