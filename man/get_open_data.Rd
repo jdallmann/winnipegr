@@ -9,7 +9,7 @@ get_open_data(type = c("parking", "2018 polling geoms", "air quality",
   "parking bans", "parks", "park assets", "council expenses",
   "public notices", "mosquito traps", "address coords", "permit details",
   "burials", "dispositions", "311", "lane closures"), app_token = NA,
-  email = NA, password = NA, ...)
+  email = NA, password = NA)
 }
 \arguments{
 \item{type}{Specifies with data set to download. Currently supports

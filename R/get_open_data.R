@@ -65,8 +65,7 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                                    "lane closures"),
                           app_token = NA,
                           email = NA,
-                          password  = NA,
-                          ...){
+                          password  = NA){
     type <- match.arg(type)
     library(RSocrata)
     # if(!requireNamespace("RSocrata", quietly = TRUE)){
