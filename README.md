@@ -88,5 +88,5 @@ login credentials to have full (non-throttled) access to the API.
 }
 ```
 
-## Travis
+## Cross-platform tests
 [![Travis build status](https://travis-ci.org/jdallmann/winnipegr.svg?branch=master)](https://travis-ci.org/jdallmann/winnipegr)
