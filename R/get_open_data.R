@@ -68,7 +68,7 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                           password  = NA,
                           ...){
     type <- match.arg(type)
-    if('RSocrata' %in% rownames(installed.packages()) == FALSE){
+    if(!requireNamespace("RSocrata", quietly = TRUE)){
         stop("The 'RSocrata' package needs to be installed first")
     }
 

@@ -14,5 +14,10 @@ RoxygenNote: 6.1.1
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    RSocrata,
+    dplyr,
+    magrittr,
+    riem,
+    weathermetrics
 VignetteBuilder: knitr
