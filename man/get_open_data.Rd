@@ -17,7 +17,7 @@ WPA parking station data (\code{"parking"}), 2018 election
 polling subdivision units (\code{"2018 polling geoms"}), air
 quality data (\code{"air quality"}), taxation assessment parcels
 (\code{"tax parcels"}), tree inventory (\code{"trees"}), building
-permits (\code{building permits"}), snow plow schedule
+permits (\code{"building permits"}), snow plow schedule
 (\code{"plow schedule"}), parking ban schedule (\code{"parking bans"}),
 parks and open space (\code{"parks"}), park asset inventory
 (\code{"park assets"}), council member expenses
