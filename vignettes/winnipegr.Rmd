@@ -1,9 +1,26 @@
-# winnipegr
+---
+title: "winnipegr"
+author: "Justin Dallmann"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
 
 This R package provides an abstraction layer for easily accessing openly available data sets for Winnipeg, MB, Canada. 
 
 
-## Installation
+# Installation
 
 In the future, you will be able to install the released version of winnipegr from [CRAN](https://CRAN.R-project.org) with:
 
@@ -17,7 +34,7 @@ install.packages("devtools")
 devtools::install_github("jdallmann/winnipegr")
 ```
 
-## Retrieving Data
+# Retrieving Data
 The package includes the following functions for downloading open data:
 
 - `wpg_weather` for sourcing Winnipeg weather from stations from: Winnipeg 'CXWI', Winnipeg Forks 'CXWN', and Winnipeg International Airport 'CYWG'.
@@ -57,8 +74,8 @@ The package also contains certain internal fixed data sets. Load these data sets
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
 
 
-## Examples
-### `wpg_weather`
+# Examples
+## `wpg_weather`
 This function uses the \code{reim} package to load Winnipeg
 weather abstracting station names. Measurements can be
 converted to metric using \code{meathermetrics}.
@@ -75,7 +92,7 @@ converted to metric using \code{meathermetrics}.
 ```
 
 
-### `get_open_data`
+## `get_open_data`
 This function uses the \code{RSocrata} package to get Winnipeg
 City data from the Winnipeg Open Data site \code{data.winnipeg.ca}.
 Users with a City of Winnipeg open data account can also use their
@@ -87,6 +104,3 @@ login credentials to have full (non-throttled) access to the API.
     password = FAKE_PASSWORD)
 }
 ```
-
-## Travis
-[![Travis build status](https://travis-ci.org/jdallmann/winnipegr.svg?branch=master)](https://travis-ci.org/jdallmann/winnipegr)
