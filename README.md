@@ -13,7 +13,8 @@ install.packages("winnipegr")
 
 But, for now you need to use `devtools`:
 ``` r
-install_github("jdallmann/winnipegr")
+install.packages("devtools")
+devtools::install_github("jdallmann/winnipegr")
 ```
 
 ## Retrieving Data
