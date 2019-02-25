@@ -5,7 +5,7 @@
 #' Users with a City of Winnipeg open data account can also use their
 #' login credentials to have full (non-throttled) access to the API.
 #'
-#' @importFrom RSocrata read.Socrata
+#' @import RSocrata
 #'
 #' @export
 #'
@@ -68,9 +68,10 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                           password  = NA,
                           ...){
     type <- match.arg(type)
-    if(!requireNamespace("RSocrata", quietly = TRUE)){
-        stop("The 'RSocrata' package needs to be installed first")
-    }
+    library(RSocrata)
+    # if(!requireNamespace("RSocrata", quietly = TRUE)){
+    #     stop("The 'RSocrata' package needs to be installed first")
+    # }
 
     if(type == "parking"){
         datasetID <- "c2m5-vayh"
@@ -133,12 +134,12 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                      datasetID,
                      ".json")
     if(is.na(app_token)){
-        RSocrata::read.socrata(jsonID)
+        read.socrata(jsonID)
     } else {
-        RSocrata::read.socrata(jsonID,
-                               app_token = app_token,
-                               email = email,
-                               password = password)
+        read.socrata(jsonID,
+                     app_token = app_token,
+                     email = email,
+                     password = password)
     }
 
 }

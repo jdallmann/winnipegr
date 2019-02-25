@@ -3,6 +3,7 @@
 export(get_WPA_stations)
 export(get_open_data)
 export(wpg_weather)
+import(RSocrata)
 importFrom(RSocrata,read.Socrata)
 importFrom(dplyr,mutate)
 importFrom(dplyr,rename)

@@ -15,9 +15,10 @@ Suggests:
     knitr,
     rmarkdown,
     testthat,
-    RSocrata,
     dplyr,
     magrittr,
     riem,
     weathermetrics
 VignetteBuilder: knitr
+Imports: 
+    RSocrata
