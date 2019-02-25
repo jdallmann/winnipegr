@@ -11,10 +11,15 @@ In the future, you will be able to install the released version of winnipegr fro
 install.packages("winnipegr")
 ```
 
-But, for now you need to use `devtools`:
+But, for now you need to use `devtools` (or `ghit`, a lighter-weight alternative):
 ``` r
 install.packages("devtools")
 devtools::install_github("jdallmann/winnipegr")
+```
+OR
+``` r
+install.packages("ghit")
+ghit::install_github("jdallmann/winnipegr")
 ```
 
 ## Retrieving Data
