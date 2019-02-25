@@ -4,7 +4,7 @@
 #' WPA Paystation data from the Winnipeg Open Data site
 #' \code{data.winnipeg.ca}.
 #'
-#' @importFrom RSocrata read.Socrata
+#' @import RSocrata
 #'
 #' @export
 #'
@@ -18,8 +18,11 @@
 #'     get_WPA_stations()
 #' }
 #'
+#'
+
 get_WPA_stations <- function(){
-    RSocrata::read.socrata(
+    library(RSocrata)
+    read.socrata(
         "https://data.winnipeg.ca/resource/c2m5-vayh.json"
     )
 }

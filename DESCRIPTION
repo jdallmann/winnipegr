@@ -14,11 +14,11 @@ RoxygenNote: 6.1.1
 Suggests: 
     knitr,
     rmarkdown,
-    testthat,
+    testthat
+VignetteBuilder: knitr
+Imports: 
+    RSocrata,
     dplyr,
     magrittr,
     riem,
     weathermetrics
-VignetteBuilder: knitr
-Imports: 
-    RSocrata
