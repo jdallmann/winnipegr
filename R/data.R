@@ -6,20 +6,37 @@
 #' \url{https://data.winnipeg.ca/Census/Census-Mode-Of-Transportation/ijxa-tybv}
 #' @format A data frame with 31 columns:
 #' \describe{
-#'  \item{bicycle_X}{People of type X who travel via bicycle.}
+#'  \item{bicycle_female}{Females who travel via bicycle.}
+#'  \item{bicycle_male}{Males who travel via bicycle.}
+#'  \item{bicycle_total}{Total who travel via bicycle.}
 #'  \item{boundary_name}{...}
 #'  \item{boundary_number}{...}
 #'  \item{boundary_type}{...}
-#'  \item{car_X}{People of type X who travel via car.}
+#'  \item{car_female}{Females who travel via car.}
+#'  \item{car_male}{...}
+#'  \item{car_total}{...}
 #'  \item{census_year}{...}
-#'  \item{motorcycle_X}{People of type X who travel via motorcycle}
-#'  \item{other_X}{People of type X who travel via other means.}
-#'  \item{passenger_X}{People of type X who travel via passenger.}
-#'  \item{public_X}{People of type X who travel via public transport.}
-#'  \item{taxi_X}{People of type X who travel via taxi.}
+#'  \item{motorcycle_female}{Females who travel via motorcycle.}
+#'  \item{motorcycle_male}{Males who travel via motorcycle.}
+#'  \item{motorcycle_total}{Total motorcycle travellers.}
+#'  \item{other_female}{Females who travel via other means.}
+#'  \item{other_male}{Males who travel via other means.}
+#'  \item{other_total}{Total indivuduals traveling via other means.}
+#'  \item{passenger_female}{...}
+#'  \item{passenger_male}{...}
+#'  \item{passenger_total}{...}
+#'  \item{public_female}{Females who travel via public transport.}
+#'  \item{public_male}{...}
+#'  \item{public_total}{...}
+#'  \item{taxi_female}{Females who travel via taxi.}
+#'  \item{taxi_male}{Males who travel via taxi.}
+#'  \item{taxi_total}{Total who travel via taxi.}
 #'  \item{total}{...}
-#'  \item{total_X}{Total in group X.}
-#'  \item{walk_X}{People of type X who walk as means of transportation.}
+#'  \item{total_female}{Total in group female.}
+#'  \item{total_male}{Total in group male.}
+#'  \item{walk_female}{Females who walk as means of transportation.}
+#'  \item{walk_male}{Males who walk as means of transportation.}
+#'  \item{walk_total}{Total who walk as means of transportation.}
 #' }
 #' @examples
 #' \dontrun{

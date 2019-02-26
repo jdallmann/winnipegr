@@ -67,10 +67,10 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                           email = NA,
                           password  = NA){
     type <- match.arg(type)
-    library(RSocrata)
-    # if(!requireNamespace("RSocrata", quietly = TRUE)){
-    #     stop("The 'RSocrata' package needs to be installed first")
-    # }
+    # library(RSocrata)
+    if(!requireNamespace("RSocrata", quietly = TRUE)){
+        stop("The 'RSocrata' package needs to be installed first")
+    }
 
     if(type == "parking"){
         datasetID <- "c2m5-vayh"

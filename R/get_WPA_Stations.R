@@ -21,7 +21,10 @@
 #'
 
 get_WPA_stations <- function(){
-    library(RSocrata)
+    # library(RSocrata)
+    if(!requireNamespace("RSocrata", quietly = TRUE)){
+        stop("The 'RSocrata' package needs to be installed first")
+    }
     read.socrata(
         "https://data.winnipeg.ca/resource/c2m5-vayh.json"
     )
