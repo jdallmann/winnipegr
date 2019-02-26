@@ -15,6 +15,7 @@ Suggests:
     knitr,
     rmarkdown,
     testthat
+Depends: R (>= 3.1.0)
 VignetteBuilder: knitr
 Imports: 
     RSocrata,
