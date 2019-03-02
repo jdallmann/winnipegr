@@ -62,7 +62,8 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                                    "mosquito traps", "address coords",
                                    "permit details", "burials",
                                    "dispositions", "311",
-                                   "lane closures"),
+                                   "lane closures", "TSI-cameras detail",
+                                   ),
                           app_token = NA,
                           email = NA,
                           password  = NA){
@@ -124,6 +125,34 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "q8w3-jhjb"
     } else if (type == "contravention"){
         datasetID <- "rzfe-3um4"
+    } else if (type == "TSI-cameras detail"){
+        datasetID <- "42pk-2u2c"
+    } else if (type == "TSI-pole and cabinet locations"){
+        datasetID <- "57s9-d44a"
+    } else if (type == "TSI-locations"){
+        datasetID <- "utdw-xwym"
+    } else if (type == "TSI-corridor box indications detail"){
+        datasetID <- "bu5e-xfzz"
+    } else if (type == "TSI-corridor boxes detail"){
+        datasetID <- "t4v5-7aux"
+    } else if (type == "TSI-heads (displays) detail"){
+        datasetID <- "3jzf-z9w2"
+    } else if (type == "TSI-hardware detail"){
+        datasetID <- "5kuj-ijzu"
+    } else if (type == "TSI-pole and arms detail"){
+        datasetID <- "rnjd-2kp8"
+    } else if (type == "TSI-bases detail trans"){
+        datasetID <- "ygik-qdgr"
+    } else if (type == "TSI-pole and arms detail"){
+        datasetID <- "rzfe-3um4"
+    } else if (type == "traffic signal malfunctions"){
+        datasetID <- "er6v-aifz"
+    } else if (type == "TSI-traffic signal damage"){
+        datasetID <- "rfk8-6wx8"
+    } else if (type == "transport mode"){
+        datasetID <- "ijxa-tybv"
+    } else if (type == "TMC-confirmed incidents"){
+        datasetID <- "4c3j-pczr"
     } else{
         datasetID <- type
     }

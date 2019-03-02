@@ -34,12 +34,12 @@ install.packages("devtools")
 devtools::install_github("jdallmann/winnipegr")
 ```
 
-# Retrieving Data
+## Retrieving Data
 The package includes the following functions for downloading open data:
 
 - `wpg_weather` for sourcing Winnipeg weather from stations from: Winnipeg 'CXWI', Winnipeg Forks 'CXWN', and Winnipeg International Airport 'CYWG'.
 - `get_WPA_Stations` for sourcing available WPA parking station variables such as `available_space`, `hourly_rate`, `timelimit`, location, and others.
-- `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. This data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). Available options include: 
+- `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. This includes particularly rich Traffic Signal Inventory (TSI) data. The data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). Available options include: 
     + "parking"
     + "2018 polling geoms"
     + "air quality"
@@ -67,7 +67,20 @@ The package includes the following functions for downloading open data:
     + "waste tonnage"
     + "web analytics
     + "river James"
-    + "contravention".
+    + "contravention"
+    + "TSI-cameras detail"
+    + "TSI-pole and cabinet locations"
+    + "TSI-locations"
+    + "TSI-corridor box indications detail"
+    + "TSI-corridor boxes detail"
+    + "TSI-heads (displays) detail"
+    + "TSI-hardware detail"
+    + "TSI-pole and arms detail"
+    + "TSI-bases detail trans"
+    + "TSI-traffic signal malfunctions"
+    + "TSI-traffic signal damage"
+    + "TMC-confirmed incidents"
+    + "transport mode"
 
 The package also contains certain internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 
