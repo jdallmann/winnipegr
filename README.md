@@ -64,7 +64,10 @@ The package includes the following functions for downloading open data:
     + "TSI-traffic signal malfunctions"
     + "TSI-traffic signal damage"
     + "TMC-confirmed incidents"
-    + "transport mode".
+    + "transport mode"
+    + "TMC-confirmed incidents"
+    + "parking citations" 
+    + "ticket adjudication results".
 
 The package also contains certain internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 

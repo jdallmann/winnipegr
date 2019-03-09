@@ -30,8 +30,17 @@
 #'     (\code{"river levels"}), residential garbage, recycling and yard waste
 #'     tonnage reports (\code{"waste tonnage"}), Winnipeg City open data
 #'     and website analytics (\code{"web analytics"}), James Avenue river
-#'     levels (\code{"river James"}), vehicle for hire contravention
-#'     (\code{"contravention"}).
+#'     levels (\code{"river James"}),
+#'     \code{"vehicle for hire contravention"}, \code{"parking citations"},
+#'     \code{"ticket adjudication results"}, \code{"TSI-cameras detail"},
+#'     \code{"TSI-pole and cabinet locations"}, \code{"TSI-locations"},
+#'     \code{"TSI-corridor box indications detail"},
+#'     \code{"TSI-corridor boxes detail"},
+#'     \code{"TSI-heads (displays) detail"}, \code{"TSI-hardware detail"},
+#'     \code{"TSI-pole and arms detail"}, \code{"TSI-bases detail trans"},
+#'     \code{"TSI-pole and arms detail"}, \code{"traffic signal malfunctions"},
+#'     \code{"TSI-traffic signal damage"}, \code{"transport mode"},
+#'     \code{"TMC-confirmed incidents"}).
 #'
 #' @param app_token Optional app_token parameter for users with a city
 #'     of Winnipeg Open Data account available at
@@ -62,8 +71,19 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                                    "mosquito traps", "address coords",
                                    "permit details", "burials",
                                    "dispositions", "311",
-                                   "lane closures", "TSI-cameras detail",
-                                   ),
+                                   "lane closures", "contravention",
+                                   "vehicle for hire contravention",
+                                   "parking citations", "ticket adjudication results",
+                                   "TSI-cameras detail",
+                                   "TSI-pole and cabinet locations", "TSI-locations",
+                                   "TSI-corridor box indications detail",
+                                   "TSI-corridor boxes detail",
+                                   "TSI-heads (displays) detail", "TSI-hardware detail",
+                                   "TSI-pole and arms detail", "TSI-bases detail trans",
+                                   "TSI-pole and arms detail",
+                                   "traffic signal malfunctions",
+                                   "TSI-traffic signal damage", "transport mode",
+                                   "TMC-confirmed incidents"),
                           app_token = NA,
                           email = NA,
                           password  = NA){
@@ -123,8 +143,12 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "fgza-8s5e"
     } else if (type == "river James"){
         datasetID <- "q8w3-jhjb"
-    } else if (type == "contravention"){
+    } else if (type == "vehicle for hire contravention"){
         datasetID <- "rzfe-3um4"
+    } else if (type == "parking citations"){
+        datasetID <- "bhrt-29rb"
+    } else if (type == "ticket adjudication results"){
+        datasetID <- "hzdi-nwqn"
     } else if (type == "TSI-cameras detail"){
         datasetID <- "42pk-2u2c"
     } else if (type == "TSI-pole and cabinet locations"){

@@ -8,8 +8,17 @@ get_open_data(type = c("parking", "2018 polling geoms", "air quality",
   "tax parcels", "trees", "building permits", "plow schedule",
   "parking bans", "parks", "park assets", "council expenses",
   "public notices", "mosquito traps", "address coords", "permit details",
-  "burials", "dispositions", "311", "lane closures", "TSI-cameras detail",
-  ), app_token = NA, email = NA, password = NA)
+  "burials", "dispositions", "311", "lane closures", "contravention",
+  "vehicle for hire contravention", "parking citations",
+  "ticket adjudication results", "TSI-cameras detail",
+  "TSI-pole and cabinet locations", "TSI-locations",
+  "TSI-corridor box indications detail",      "TSI-corridor boxes detail",
+  "TSI-heads (displays) detail", "TSI-hardware detail",
+  "TSI-pole and arms detail", "TSI-bases detail trans",
+  "TSI-pole and arms detail", "traffic signal malfunctions",
+  "TSI-traffic signal damage", "transport mode",
+  "TMC-confirmed incidents"), app_token = NA, email = NA,
+  password = NA)
 }
 \arguments{
 \item{type}{Specifies with data set to download. Currently supports
@@ -33,8 +42,17 @@ recycling, garbage and yard waste collection days
 (\code{"river levels"}), residential garbage, recycling and yard waste
 tonnage reports (\code{"waste tonnage"}), Winnipeg City open data
 and website analytics (\code{"web analytics"}), James Avenue river
-levels (\code{"river James"}), vehicle for hire contravention
-(\code{"contravention"}).}
+levels (\code{"river James"}),
+\code{"vehicle for hire contravention"}, \code{"parking citations"},
+\code{"ticket adjudication results"}, \code{"TSI-cameras detail"},
+\code{"TSI-pole and cabinet locations"}, \code{"TSI-locations"},
+\code{"TSI-corridor box indications detail"},
+\code{"TSI-corridor boxes detail"},
+\code{"TSI-heads (displays) detail"}, \code{"TSI-hardware detail"},
+\code{"TSI-pole and arms detail"}, \code{"TSI-bases detail trans"},
+\code{"TSI-pole and arms detail"}, \code{"traffic signal malfunctions"},
+\code{"TSI-traffic signal damage"}, \code{"transport mode"},
+\code{"TMC-confirmed incidents"}).}
 
 \item{app_token}{Optional app_token parameter for users with a city
 of Winnipeg Open Data account available at
