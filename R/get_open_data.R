@@ -40,7 +40,8 @@
 #'     \code{"TSI-pole and arms detail"}, \code{"TSI-bases detail trans"},
 #'     \code{"TSI-pole and arms detail"}, \code{"traffic signal malfunctions"},
 #'     \code{"TSI-traffic signal damage"}, \code{"transport mode"},
-#'     \code{"TMC-confirmed incidents"}).
+#'     \code{"TMC-confirmed incidents"}, \code{"transit on-time"},
+#'     \code{"transit on-time hist"}, \code{"transit pass-ups"}).
 #'
 #' @param app_token Optional app_token parameter for users with a city
 #'     of Winnipeg Open Data account available at
@@ -83,7 +84,9 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                                    "TSI-pole and arms detail",
                                    "traffic signal malfunctions",
                                    "TSI-traffic signal damage", "transport mode",
-                                   "TMC-confirmed incidents"),
+                                   "TMC-confirmed incidents",
+                                   "transit on-time", "transit on-time hist",
+                                   "transit pass-ups"),
                           app_token = NA,
                           email = NA,
                           password  = NA){
@@ -177,6 +180,12 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "ijxa-tybv"
     } else if (type == "TMC-confirmed incidents"){
         datasetID <- "4c3j-pczr"
+    } else if (type == "transit on-time"){
+        datasetID <- "gp3k-am4u"
+    } else if (type == "transit pass-ups"){
+        datasetID <- "mer2-irmb"
+    } else if (type == "transit on-time hist"){
+        datasetID <- "cymk-nyei"
     } else{
         datasetID <- type
     }
