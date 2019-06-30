@@ -72,7 +72,7 @@ The package includes the following functions for downloading open data:
     + "transit on-time hist"
     + "transit pass-ups"
 
-The package also contains certain internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
+The package also contains internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
 - `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 with sf geography at the DA level.
@@ -80,9 +80,9 @@ The package also contains certain internal fixed data sets. Load these data sets
 
 ## Examples
 ### `wpg_weather`
-This function uses the \code{reim} package to load Winnipeg
-weather abstracting station names. Measurements can be
-converted to metric using \code{meathermetrics}.
+This function uses the `reim` package to load Winnipeg
+weather abstracting station names. Measurements have the option to 
+be converted to metric using the `weathermetrics` package.
 
 ``` r
 \dontrun{
