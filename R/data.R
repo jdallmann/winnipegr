@@ -80,6 +80,6 @@
 #' }
 #' @examples
 #' \dontrun{
-#'  commute_mode_2019
+#'  census_commute_2019
 #' }
-"commute_mode_2019"
+"census_commute_2019"

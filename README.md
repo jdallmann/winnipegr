@@ -68,10 +68,14 @@ The package includes the following functions for downloading open data:
     + "TMC-confirmed incidents"
     + "parking citations" 
     + "ticket adjudication results".
+    + "transit on-time"
+    + "transit on-time hist"
+    + "transit pass-ups"
 
 The package also contains certain internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
+- `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 with sf geography at the DA level.
 
 
 ## Examples
