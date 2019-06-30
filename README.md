@@ -106,5 +106,7 @@ login credentials to have full (non-throttled) access to the API.
     get_open_data("parking", app_token = SOME_API_TOKEN,
     email = FAKE_EMAIL,
     password = FAKE_PASSWORD)
+\dontrun{
+    get_open_data("river James")
 }
 ```
