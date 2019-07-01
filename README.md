@@ -78,6 +78,7 @@ The package also contains internal fixed data sets. Load these data sets in the 
 - `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 with sf geography at the DA level.
 - `wpg_electoral_wards_2018` Winnipeg electoral wards following 2018 election with shapefile geometries.
 - `neighbourhoods_2017` Boundaries of neighbourhood characterization areas (aka NCA) used to delineate neighbourhoods for city planning purposes.
+- `active_trans_ntwk_2019` Boundaries and data for Winnipeg's active transport cycling network.
 
 
 

@@ -123,3 +123,26 @@
 #'  transport_mode
 #' }
 "neighbourhoods_2017"
+
+
+#' Winnipeg active transportation cycling network data and shapefiles
+#' @source (Winnipeg Open Data)[https://data.winnipeg.ca/].
+#' \url{https://data.winnipeg.ca/Transportation-Planning-Traffic-Management/Active-Transportation-Network/wm39-dswz}
+#' @format A data frame with 9 columns:
+#' \describe{
+#' \item{city_area}{Area of the city the path is in.}
+#'  \item{id}{Network id number.}
+#'  \item{location}{Off road, on road, etc.}
+#'  \item{nbhd}{Neighbourhood.}
+#'  \item{spine_ntwk}{Whether it is a spine network. 'Yes' or 'No'.}
+#'  \item{st_name}{Street name.}
+#'  \item{type}{Type of network.}
+#'  \item{ward}{Ward name.}
+#'  \item{geometry}{Shapefile geometry for network path.}
+
+#' }
+#' @examples
+#' \dontrun{
+#'  active_trans_ntwk_2019
+#' }
+"active_trans_ntwk_2019"
