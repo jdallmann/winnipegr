@@ -103,3 +103,23 @@
 #'  transport_mode
 #' }
 "wpg_electoral_wards_2018"
+
+
+#' Boundaries of neighbourhood characterization areas (aka NCA)
+#' as polygons. Neighbourhood characterization areas are used
+#' to delineate neighbourhoods for city planning purposes.
+#'
+#' @source (Winnipeg Open Data)[https://data.winnipeg.ca/].
+#' \url{https://data.winnipeg.ca/City-Planning/Neighbourhood/fen6-iygi}
+#' @format A data frame with 3 columns:
+#' \describe{
+#'  \item{id}{Neighbourhood id number.}
+#'  \item{name}{Neighbourhood name.}
+#'  \item{geometry}{Neighbourhood shapefile geometry.}
+
+#' }
+#' @examples
+#' \dontrun{
+#'  transport_mode
+#' }
+"neighbourhoods_2017"
