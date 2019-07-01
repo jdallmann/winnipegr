@@ -76,6 +76,7 @@ The package also contains internal fixed data sets. Load these data sets in the 
 
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
 - `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 with sf geography at the DA level.
+- `wpg_electoral_wards_2018` Winnipeg electoral wards following 2018 election with shapefile geometries.
 
 
 ## Examples
@@ -97,8 +98,8 @@ be converted to metric using the `weathermetrics` package.
 
 
 ### `get_open_data`
-This function uses the \code{RSocrata} package to get Winnipeg
-City data from the Winnipeg Open Data site \code{data.winnipeg.ca}.
+This function uses the `RSocrata` package to get Winnipeg
+City data from the Winnipeg Open Data site `data.winnipeg.ca`.
 Users with a City of Winnipeg open data account can also use their
 login credentials to have full (non-throttled) access to the API.
 ``` r

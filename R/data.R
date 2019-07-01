@@ -83,3 +83,23 @@
 #'  census_commute_2019
 #' }
 "census_commute_2019"
+
+
+#' Winnipeg 2018 Electoral Wards
+#'
+#' @source (Winnipeg Open Data)[https://data.winnipeg.ca/].
+#' \url{https://data.winnipeg.ca/Council-Services/Electoral-Ward/ede3-teb8}
+#' @format A data frame with 6 columns:
+#' \describe{
+#'  \item{councillor}{Self-explanatory.}
+#'  \item{name}{Ward name.}
+#'  \item{number}{Ward number.}
+#'  \item{phone}{Councillor phone number.}
+#'  \item{website}{Councillor website.}
+#'  \item{geometry}{Shapefile geometry.}
+#' }
+#' @examples
+#' \dontrun{
+#'  transport_mode
+#' }
+"wpg_electoral_wards_2018"

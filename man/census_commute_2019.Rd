@@ -4,7 +4,7 @@
 \name{census_commute_2019}
 \alias{census_commute_2019}
 \title{Census commute data for Winnipeg CMA 2019 with sf geography at the DA level.}
-\format{An object of class \code{sf} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1229 rows and 26 columns.}
+\format{An object of class \code{sf} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1229 rows and 31 columns.}
 \source{
 Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
 \url{https://cran.r-project.org/web/packages/cancensus/index.html}
