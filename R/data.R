@@ -45,16 +45,13 @@
 "transport_mode"
 
 
-#' Census commute data for Winnipeg CMA 2019 with sf geography at the DA level.
+#' Census commute data for Winnipeg CMA 2019 at the DA level.
 #'
 #' @source Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
 #' \url{https://cran.r-project.org/web/packages/cancensus/index.html}
-#' @format A data frame with 26 columns:
+#' @format A data frame with 27 columns:
 #' \describe{
-#'  \item{area_km}{Shape area}
-#'  \item{dwellings}{Number of dwellings}
-#'  \item{households}{Number of households}
-#'  \item{population}{Population}
+#'  \item{geo_uid}{DA identifier}
 #'  \item{region}{Region name}
 #'  \item{leaving_time_total}{v_CA16_5831: Total - Time leaving for work for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data}
 #'  \item{leaving_time_5}{v_CA16_5834: Between 5 a.m. and 5:59 a.m.}
@@ -76,8 +73,12 @@
 #'  \item{duration_30to44}{v_CA16_5822: 30 to 44 minutes}
 #'  \item{duration_45to59}{v_CA16_5825: 45 to 59 minutes}
 #'  \item{duration_60plus}{v_CA16_5828: 60 minutes and over}
-#'  \item{geometry}{sf geometry for use in sf methods of mapping}
-#' }
+#'  \item{dist_total}{v_CA16_5777: Total - Commuting destination for the employed labour force aged 15 years and over in private households with a usual place of work - 25% sample data}
+#'  \item{dist_short_inCSD}{v_CA16_5780: Commute within census subdivision (CSD) of residence}
+#'  \item{dist_med_inCD}{v_CA16_5783: Commute to a different census subdivision (CSD) within census division (CD) of residence}
+#'  \item{dist_long_inProv}{v_CA16_5786: Commute to a different census subdivision (CSD) and census division (CD) within province or territory of residence}
+#'  \item{dist_extreme_outProv}{v_CA16_5789: Commute to a different province or territory}
+#'  }
 #' @examples
 #' \dontrun{
 #'  census_commute_2019
@@ -146,3 +147,52 @@
 #'  active_trans_ntwk_2019
 #' }
 "active_trans_ntwk_2019"
+
+
+
+#' Key Winnipeg demographics information for 100% data
+#' and total data. Data is at the finest geographical
+#' resolution (Dissemination Area---DA) available. Admittedly not
+#' complete, and based on variables of interest in my work.
+#'
+#' @source Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
+#' \url{https://cran.r-project.org/web/packages/cancensus/index.html}
+#' @format A data frame with 71 columns:
+#' \describe{
+#' \item{NEED_TO_ADD}{NEED_TO_ADD}
+#' }
+#' @examples
+#' \dontrun{
+#'  census_demo_2019
+#' }
+"census_demo_2019"
+
+#' Key Winnipeg demographics information for DAs with shapefiles.
+#' Data is at the finest geographical resolution
+#' (Dissemination Area---DA) available.
+#'
+#' @source Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
+#' \url{https://cran.r-project.org/web/packages/cancensus/index.html}
+#' @format A data frame with 13 columns:
+#' \describe{
+#' \item{shape_area}{Area in kms^2.}
+#' \item{type}{Geography type/granularity. Dissemination area.}
+#' \item{dwellings}{Dwellings.}
+#' \item{households}{Households.}
+#' \item{geo_uid}{Unique DA indentifier.}
+#' \item{population}{Population.}
+#' \item{cd_uid}{CD identifier.}
+#' \item{csd_uid}{DSG identifier.}
+#' \item{ct_uid}{CT identifier.}
+#' \item{cma_uid}{CMA (Winnipeg) identifier.}
+#' \item{region_name}{Region name.}
+#' \item{area_sq_km}{Area_sq_km.}
+#' \item{geometry}{Geometrical boudary in sfc multipolygon format.}
+#' \item{}{}
+#' }
+#' @examples
+#' \dontrun{
+#'  census_DA_2019
+#' }
+"census_DA_2019"
+
