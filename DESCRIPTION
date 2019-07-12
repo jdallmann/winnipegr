@@ -21,5 +21,7 @@ Imports:
     RSocrata,
     dplyr,
     magrittr,
+    purrr,
     riem,
+    rjson,
     weathermetrics
