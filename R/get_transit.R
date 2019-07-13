@@ -69,6 +69,7 @@
 #'
 get_transit <- function(option_vec = NA,
                         stop = NA,
+                        route = NA, # For use with variants
                         type = "stops",
                         api_key = NA,
                         ...){
@@ -85,7 +86,7 @@ get_transit <- function(option_vec = NA,
     } else if(type == "statuses"){
         "statuses/schedule"
     } else if(type == "variants"){
-        paste0("variants/", NA)#Add logic
+        paste0("variants/", route, "/destinations")
     } else if(type %in% c("stops", "locations", "service-advisories",
                           "routes", "streets", "system-messages",
                           "trip-planner")){
