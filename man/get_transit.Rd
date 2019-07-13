@@ -4,55 +4,28 @@
 \alias{get_transit}
 \title{Winnipeg Transit API}
 \usage{
-get_transit(option_vec = NA, stop = NA, type = "stops",
+get_transit(option_vec = NA, stop = NA, route = NA, type = "stops",
   api_key = NA, ...)
 }
 \arguments{
+\item{option_vec}{Optional vector of options for API call. See
+(https://api.winnipegtransit.com/home/api/v3) for relevant options.}
+
+\item{stop}{Required stop parameter for "stop-features" or "schedule"
+requests.}
+
+\item{route}{Required route parameter for route "variants" requests.
+See (https://api.winnipegtransit.com/home/api/v3/services/variants)
+for possible values.}
+
 \item{type}{Specifies with data set to download. Currently supports
-WPA parking station data (\code{"parking"}), 2018 election
-polling subdivision units (\code{"2018 polling geoms"}), air
-quality data (\code{"air quality"}), taxation assessment parcels
-(\code{"tax parcels"}), tree inventory (\code{"trees"}), building
-permits (\code{"building permits"}), snow plow schedule
-(\code{"plow schedule"}), parking ban schedule (\code{"parking bans"}),
-parks and open space (\code{"parks"}), park asset inventory
-(\code{"park assets"}), council member expenses
-(\code{"council expenses"}), (\code{"public notices"}), daily adult
-mosquito trap data (\code{"mosquito traps"}), (\code{"address coords"}),
-detailed building permit data (\code{"permit details"}), burial records
-(\code{"burials"}), public meeting dispositions (\code{"dispositions"}),
-311 service requests (\code{"311"}), lane closure
-(\code{"lane closures"}), by-law investigations (\code{"by-law"}),
-recycling, garbage and yard waste collection days
-(\code{"collection days"}), 311 interactions by channel
-(\code{"311 channels"}), (\code{"school enrolments"}),
-(\code{"river levels"}), residential garbage, recycling and yard waste
-tonnage reports (\code{"waste tonnage"}), Winnipeg City open data
-and website analytics (\code{"web analytics"}), James Avenue river
-levels (\code{"river James"}),
-\code{"vehicle for hire contravention"}, \code{"parking citations"},
-\code{"ticket adjudication results"}, \code{"TSI-cameras detail"},
-\code{"TSI-pole and cabinet locations"}, \code{"TSI-locations"},
-\code{"TSI-corridor box indications detail"},
-\code{"TSI-corridor boxes detail"},
-\code{"TSI-heads (displays) detail"}, \code{"TSI-hardware detail"},
-\code{"TSI-pole and arms detail"}, \code{"TSI-bases detail trans"},
-\code{"TSI-pole and arms detail"}, \code{"traffic signal malfunctions"},
-\code{"TSI-traffic signal damage"}, \code{"transport mode"},
-\code{"TMC-confirmed incidents"}, \code{"transit on-time"},
-\code{"transit on-time hist"}, \code{"transit pass-ups"}).}
+"stops", "locations", "service-advisories", "routes",
+"streets", "system-messages", "trip-planner", "stop-features",
+"schedule", "statuses", "variants".}
 
-\item{app_token}{Optional app_token parameter for users with a city
-of Winnipeg Open Data account available at
-(https://data.winnipeg.ca/)}
-
-\item{email}{Optional email parameter for users with a city
-of Winnipeg Open Data account available at
-(https://data.winnipeg.ca/)}
-
-\item{password}{Optional password parameter for users with a city
-of Winnipeg Open Data account available at
-(https://data.winnipeg.ca/)}
+\item{api_key}{Manditory api parameter for users with a city
+of Winnipeg Transit API account available at
+(https://api.winnipegtransit.com/home/api/v3)}
 }
 \value{
 A dataframe containing the relvant data set.
