@@ -73,15 +73,21 @@ get_transit <- function(option_vec = NA,
                         api_key = NA,
                         ...){
     if(is.na(api_key)){
-        stop("No API key specified")
+        stop("No API key specified.")
     }
-    stopifnot(type %in% c("stops","schedule"))
+    stopifnot(type %in% c("stops"))
     api_call <- "https://api.winnipegtransit.com/v3/"
 
-    type_API_str <- if(type == "stops"){
-        "stops/"
+    type_API_str <- if(type == "stop-features"){
+        paste0("stops/", stop, "/features")
     } else if(type == "schedule"){
-        NA
+        paste0("stops/", stop, "/schedule")
+    } else if(type == "statuses"){
+        "statuses/schedule"
+    } else if(type %in% c("stops", "locations", "service-advisories",
+                          "routes", "streets", "system-messages",
+                          "trip-planner"){
+        type
     }
 
     api_call <- paste0(
