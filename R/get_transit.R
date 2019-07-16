@@ -66,6 +66,7 @@ get_transit <- function(option_vec = NA,
 
     api_call <- paste0(
         api_call,
+        type_API_str,
         ".json?api-key=",
         api_key,
         "&",
