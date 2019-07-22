@@ -44,9 +44,6 @@ for an API key.
         "lon=-97.1384"", "distance=1000",
         "walking=true", "usage=short"),
         api_key = transit_API)
-    get_open_data("parking", app_token = SOME_API_TOKEN,
-        email = FAKE_EMAIL,
-        password = FAKE_PASSWORD)
 }
 
 
