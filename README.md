@@ -122,7 +122,8 @@ login credentials to have full (non-throttled) access to the API.
 
 ### `get_transit`
 This function uses the `rjson` package to get Winnipeg
-City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants).
+City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants). 
+It also flattens that data from json to a tidy dataframe. 
 Users must have registered for their own (free) API key to use.
 ``` r
 \dontrun{
