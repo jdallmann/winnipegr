@@ -24,12 +24,18 @@
 #' @param route Required route parameter for route "variants" requests.
 #' See (https://api.winnipegtransit.com/home/api/v3/services/variants)
 #' for possible values.
+#' @param ... Additional parameters to pass to the Winnipeg Transit API.
 #'
 #' @return A dataframe containing the relvant data set.
 #'
 #' @examples
 #' \dontrun{
-#'     get_open_data("trees")
+#'     get_transit(option_vec = c("lat=-97.1384",
+#'         "lon="49.8951, "distance=1000",
+#'         "walking=true", "usage=short"),
+#'         api_key = transit_API)
+# )
+
 #'     get_open_data("parking", app_token = SOME_API_TOKEN,
 #'         email = FAKE_EMAIL,
 #'         password = FAKE_PASSWORD)
