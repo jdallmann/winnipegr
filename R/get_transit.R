@@ -30,8 +30,8 @@
 #'
 #' @examples
 #' \dontrun{
-#'     get_transit(option_vec = c("lat=-97.1384",
-#'         "lon="49.8951, "distance=1000",
+#'     get_transit(option_vec = c("lat=49.8951,
+#'         "lon=-97.1384"", "distance=1000",
 #'         "walking=true", "usage=short"),
 #'         api_key = transit_API)
 # )
