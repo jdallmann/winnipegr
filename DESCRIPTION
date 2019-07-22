@@ -1,7 +1,7 @@
 Package: winnipegr
 Type: Package
 Title: winnipeg open data aggregator
-Version: 0.1.0
+Version: 0.1.2
 Author: Justin Dallmann
 Maintainer: Justin Dallmann <jdallmann@jdallmann.org>
 Description: This R package provides an abstraction layer 
