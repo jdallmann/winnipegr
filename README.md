@@ -119,3 +119,16 @@ login credentials to have full (non-throttled) access to the API.
     get_open_data("river James")
 }
 ```
+
+### `get_transit`
+This function uses the `rjson` package to get Winnipeg
+City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants).
+Users must have registered for their own (free) API key to use.
+``` r
+\dontrun{
+    get_transit(option_vec = c("lat=49.8951,
+                "lon=-97.1384"", "distance=1000",
+                "walking=true", "usage=short"),
+                api_key = transit_API)
+}
+```
