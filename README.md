@@ -127,8 +127,8 @@ It also flattens that data from json to a tidy dataframe.
 Users must have registered for their own (free) API key to use.
 ``` r
 \dontrun{
-    get_transit(option_vec = c("lat=49.8951,
-                "lon=-97.1384"", "distance=1000",
+    get_transit(option_vec = c("lat=49.8951",
+                "lon=-97.1384", "distance=1000",
                 "walking=true", "usage=short"),
                 api_key = transit_API)
 }
