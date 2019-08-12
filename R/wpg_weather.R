@@ -46,7 +46,7 @@ wpg_weather <- function(station = c("wpg", "forks", "airport"),
     } else if(station == "forks"){
         station <- "CXWN"
     } else {
-        station <- "CYWG"
+        station <- "CYWG" #airport
     }
 
     weather <- riem::riem_measures(station,

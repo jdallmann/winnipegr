@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 This R package provides an abstraction layer for easily accessing openly available data sets for Winnipeg, MB, Canada. 
 
 
-# Installation
+## Installation
 
 In the future, you will be able to install the released version of winnipegr from [CRAN](https://CRAN.R-project.org) with:
 
@@ -84,17 +84,30 @@ The package includes the following functions for downloading open data:
     + "TMC-confirmed incidents"
     + "parking citations" 
     + "ticket adjudication results"
+    + "transit on-time"
+    + "transit on-time hist"
+    + "transit pass-ups"
+    
+- `get_transit` provies a wrapper for making calls to the [Winnipeg Transit APIs](https://api.winnipegtransit.com/home/api/v3), and flattens the result into a tidy dataframe. Requires an API key available from [https://api.winnipegtransit.com/home/api/v3](https://api.winnipegtransit.com/home/api/v3). Currently available API `type` options include:
+    + "stops" for returning stops near a specified location
 
-The package also contains certain internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
+The package also contains internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
+- `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 at the DA level.
+- `wpg_electoral_wards_2018` Winnipeg electoral wards following 2018 election with shapefile geometries.
+- `neighbourhoods_2017` Boundaries of neighbourhood characterization areas (aka NCA) used to delineate neighbourhoods for city planning purposes.
+- `active_trans_ntwk_2019` Boundaries and data for Winnipeg's active transport cycling network.
+- `census_demo_2019` Data for key Winnipeg demographics information (100% data and total data from Statistics Canada). Data is at the finest geographical resolution (Dissemination Area---DA) available. Admittedly not complete, and based on variables of interest in my work.
+- `census_DA_2019` Boudary shape file with id for Statistics Canada 2019 DA data.
 
 
-# Examples
-## `wpg_weather`
-This function uses the \code{reim} package to load Winnipeg
-weather abstracting station names. Measurements can be
-converted to metric using \code{meathermetrics}.
+
+## Examples
+### `wpg_weather`
+This function uses the `reim` package to load Winnipeg
+weather abstracting station names. Measurements have the option to 
+be converted to metric using the `weathermetrics` package.
 
 ``` r
 \dontrun{
@@ -108,9 +121,9 @@ converted to metric using \code{meathermetrics}.
 ```
 
 
-## `get_open_data`
-This function uses the \code{RSocrata} package to get Winnipeg
-City data from the Winnipeg Open Data site \code{data.winnipeg.ca}.
+### `get_open_data`
+This function uses the `RSocrata` package to get Winnipeg
+City data from the Winnipeg Open Data site `data.winnipeg.ca`.
 Users with a City of Winnipeg open data account can also use their
 login credentials to have full (non-throttled) access to the API.
 ``` r
@@ -118,5 +131,21 @@ login credentials to have full (non-throttled) access to the API.
     get_open_data("parking", app_token = SOME_API_TOKEN,
     email = FAKE_EMAIL,
     password = FAKE_PASSWORD)
+\dontrun{
+    get_open_data("river James")
+}
+```
+
+### `get_transit`
+This function uses the `rjson` package to get Winnipeg
+City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants). 
+It also flattens that data from json to a tidy dataframe. 
+Users must have registered for their own (free) API key to use.
+``` r
+\dontrun{
+    get_transit(option_vec = c("lat=49.8951",
+                "lon=-97.1384", "distance=1000",
+                "walking=true", "usage=short"),
+                api_key = transit_API)
 }
 ```
