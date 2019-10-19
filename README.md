@@ -71,6 +71,7 @@ The package includes the following functions for downloading open data:
     + "transit on-time"
     + "transit on-time hist"
     + "transit pass-ups"
+    + "fipa requests"
     
 - `get_transit` provies a wrapper for making calls to the [Winnipeg Transit APIs](https://api.winnipegtransit.com/home/api/v3), and flattens the result into a tidy dataframe. Requires an API key available from [https://api.winnipegtransit.com/home/api/v3](https://api.winnipegtransit.com/home/api/v3). Currently available API `type` options include:
     + "stops" for returning stops near a specified location
