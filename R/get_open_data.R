@@ -190,7 +190,7 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "cymk-nyei"
     }else if (type == "fipa requests"){
         datasetID <- "pfbi-rm6v"
-    else if (type == "capex"){
+    } else if (type == "capex"){
         datasetID <- "8xrn-n992"
     } else{
         datasetID <- type
