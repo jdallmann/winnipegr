@@ -17,7 +17,8 @@ get_open_data(type = c("parking", "2018 polling geoms", "air quality",
   "TSI-pole and arms detail", "TSI-bases detail trans",
   "TSI-pole and arms detail", "traffic signal malfunctions",
   "TSI-traffic signal damage", "transport mode", "TMC-confirmed incidents",
-  "transit on-time", "transit on-time hist", "transit pass-ups"),
+  "transit on-time", "transit on-time hist", "transit pass-ups",
+  "fipa requests", "capex", "river levels", "river james"),
   app_token = NA, email = NA, password = NA)
 }
 \arguments{
@@ -53,7 +54,8 @@ levels (\code{"river James"}),
 \code{"TSI-pole and arms detail"}, \code{"traffic signal malfunctions"},
 \code{"TSI-traffic signal damage"}, \code{"transport mode"},
 \code{"TMC-confirmed incidents"}, \code{"transit on-time"},
-\code{"transit on-time hist"}, \code{"transit pass-ups"}).}
+\code{"transit on-time hist"}, \code{"transit pass-ups"},
+\code{"fipa requests"}, \code{"capex"}.}
 
 \item{app_token}{Optional app_token parameter for users with a city
 of Winnipeg Open Data account available at

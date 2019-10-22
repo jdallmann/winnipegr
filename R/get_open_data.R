@@ -42,7 +42,7 @@
 #'     \code{"TSI-traffic signal damage"}, \code{"transport mode"},
 #'     \code{"TMC-confirmed incidents"}, \code{"transit on-time"},
 #'     \code{"transit on-time hist"}, \code{"transit pass-ups"},
-#'     \code{"fipa requests"}, \code{"capex"}).
+#'     \code{"fipa requests"}, \code{"capex"}.
 #'
 #' @param app_token Optional app_token parameter for users with a city
 #'     of Winnipeg Open Data account available at
