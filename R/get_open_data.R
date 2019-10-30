@@ -30,7 +30,7 @@
 #'     (\code{"river levels"}), residential garbage, recycling and yard waste
 #'     tonnage reports (\code{"waste tonnage"}), Winnipeg City open data
 #'     and website analytics (\code{"web analytics"}), James Avenue river
-#'     levels (\code{"river James"}),
+#'     levels (\code{"river james"}),
 #'     \code{"vehicle for hire contravention"}, \code{"parking citations"},
 #'     \code{"ticket adjudication results"}, \code{"TSI-cameras detail"},
 #'     \code{"TSI-pole and cabinet locations"}, \code{"TSI-locations"},
@@ -42,7 +42,7 @@
 #'     \code{"TSI-traffic signal damage"}, \code{"transport mode"},
 #'     \code{"TMC-confirmed incidents"}, \code{"transit on-time"},
 #'     \code{"transit on-time hist"}, \code{"transit pass-ups"},
-#'     \code{"fipa requests"}, \code{"capex"}.
+#'     \code{"fipa requests"}, \code{"capex"}, \code{"survey parcel"}.
 #'
 #' @param app_token Optional app_token parameter for users with a city
 #'     of Winnipeg Open Data account available at
@@ -89,7 +89,7 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                                    "transit on-time", "transit on-time hist",
                                    "transit pass-ups", "fipa requests",
                                    "capex", "river levels",
-                                   "river james"),
+                                   "river james", "survey parcel"),
                           app_token = NA,
                           email = NA,
                           password  = NA){
@@ -193,6 +193,8 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "pfbi-rm6v"
     } else if (type == "capex"){
         datasetID <- "8xrn-n992"
+    } else if (type == "survey parcel"){
+        datasetID <- "emk4-cdaw"
     } else{
         datasetID <- type
     }
