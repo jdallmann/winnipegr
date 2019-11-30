@@ -42,7 +42,8 @@
 #'     \code{"TSI-traffic signal damage"}, \code{"transport mode"},
 #'     \code{"TMC-confirmed incidents"}, \code{"transit on-time"},
 #'     \code{"transit on-time hist"}, \code{"transit pass-ups"},
-#'     \code{"fipa requests"}, \code{"capex"}, \code{"survey parcel"}.
+#'     \code{"fipa requests"}, \code{"capex"}, \code{"survey parcel"},
+#'     \code{"boundary"}.
 #'
 #' @param app_token Optional app_token parameter for users with a city
 #'     of Winnipeg Open Data account available at
@@ -89,7 +90,8 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                                    "transit on-time", "transit on-time hist",
                                    "transit pass-ups", "fipa requests",
                                    "capex", "river levels",
-                                   "river james", "survey parcel"),
+                                   "river james", "survey parcel",
+                                   "boundary"),
                           app_token = NA,
                           email = NA,
                           password  = NA){
@@ -195,6 +197,8 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
         datasetID <- "8xrn-n992"
     } else if (type == "survey parcel"){
         datasetID <- "emk4-cdaw"
+    } else if (type == "boundary"){
+        datasetID <- "jx93-sett"
     } else{
         datasetID <- type
     }
