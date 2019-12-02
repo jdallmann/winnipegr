@@ -88,7 +88,7 @@ The package also contains internal fixed data sets. Load these data sets in the 
 - `neighbourhoods_2017` Boundaries of neighbourhood characterization areas (aka NCA) used to delineate neighbourhoods for city planning purposes.
 - `active_trans_ntwk_2019` Boundaries and data for Winnipeg's active transport cycling network.
 - `census_demo_2019` Data for key Winnipeg demographics information (100% data and total data from Statistics Canada). Data is at the finest geographical resolution (Dissemination Area---DA) available. Admittedly not complete, and based on variables of interest in my work. Downloaded using von Bergmann, Shkolnik and Jacobs' [cancensus](https://mountainmath.github.io/cancensus/) package v0.2.0 on 2019-10-01.
-- `census_DA_2019` Boudary shape file with id for Statistics Canada 2019 DA data. Downloaded using von Bergmann, Shkolnik and Jacobs' [cancensus](https://mountainmath.github.io/cancensus/) package v0.2.0 on 2019-10-01.
+- `census_DA_2019` Boundary shape file with id for Statistics Canada 2019 DA data. Downloaded using von Bergmann, Shkolnik and Jacobs' [cancensus](https://mountainmath.github.io/cancensus/) package v0.2.0 on 2019-10-01.
 - `crime_aug_2019` Winnipeg police crime statistics pulled on 2019-12-02 from [here](https://www.winnipeg.ca/police/crimestat/viewMap.stm).
 - `homicide_aug_2019` Winnipeg police homicide statistics pulled on 2019-12-02 from [here](https://www.winnipeg.ca/police/crimestat/viewMap.stm).
 - `yrly_crime_2018` Statistics Canada. Table 35-10-0181-01   Incident-based crime statistics, by detailed violations, police services in Winnipeg, Manitoba. Pulled on 2019-12-02 from DOI: [https://doi.org/10.25318/3510018101-eng](https://doi.org/10.25318/3510018101-eng).
