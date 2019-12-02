@@ -49,7 +49,7 @@ The package includes the following functions for downloading open data:
     + "school enrolments"
     + "river levels"
     + "waste tonnage"
-    + "web analytics
+    + "web analytics"
     + "river james"
     + "contravention"
     + "TSI-cameras detail"
@@ -88,6 +88,8 @@ The package also contains internal fixed data sets. Load these data sets in the 
 - `active_trans_ntwk_2019` Boundaries and data for Winnipeg's active transport cycling network.
 - `census_demo_2019` Data for key Winnipeg demographics information (100% data and total data from Statistics Canada). Data is at the finest geographical resolution (Dissemination Area---DA) available. Admittedly not complete, and based on variables of interest in my work.
 - `census_DA_2019` Boudary shape file with id for Statistics Canada 2019 DA data.
+- `crime_aug_2019` Winnipeg police crime statistics pulled on 2019-12-02 from [here](https://www.winnipeg.ca/police/crimestat/viewMap.stm).
+- `homicide_aug_2019` Winnipeg police homicide statistics pulled on 2019-12-02 from [here](https://www.winnipeg.ca/police/crimestat/viewMap.stm).
 
 
 
