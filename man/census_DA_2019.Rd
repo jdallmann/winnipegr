@@ -24,7 +24,7 @@ Data is at the finest geographical resolution
 \item{}{}
 }}
 \source{
-Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
+Statistics Canada via [cancensus](https://mountainmath.github.io/cancensus/articles/cancensus.html) package.
 \url{https://cran.r-project.org/web/packages/cancensus/index.html}
 }
 \usage{
