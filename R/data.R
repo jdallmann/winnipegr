@@ -241,7 +241,7 @@
 #' Data is at the finest geographical resolution
 #' (Dissemination Area---DA) available.
 #'
-#' @source Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
+#' @source Statistics Canada via [cancensus](https://mountainmath.github.io/cancensus/articles/cancensus.html) package.
 #' \url{https://cran.r-project.org/web/packages/cancensus/index.html}
 #' @format A data frame with 13 columns:
 #' \describe{
@@ -266,3 +266,28 @@
 #' }
 "census_DA_2019"
 
+
+
+#' Winnipeg police crime historical crime statistics up to August 2019
+#' pulled on 2019-12-02. Original csv names standardized with `janitor`'s
+#' `clean_names` function. Descriptions are my best guess.
+#'
+#' @source Winnipeg police crime map for public use
+#' \url{https://www.winnipeg.ca/police/crimestat/viewMap.stm}
+#' @format A data frame with 9 columns:
+#' \describe{
+#' \item{community}{Community.}
+#' \item{count}{Number of crimes.}
+#' \item{level_3_not_displayed}{Description of crime.}
+#' \item{level_4}{Description of drug offence where applicable.}
+#' \item{neighnourhoods}{Neigbourhood of crime's occurance.}
+#' \item{number of records}{Number of records, note can be distinct from count.}
+#' \item{offence_category}{Offence category.}
+#' \item{offence}{Specific offence.}
+#' \item{report_date}{Character string report date in m/d/yyyy format.}
+#' }
+#' @examples
+#' \dontrun{
+#'  crime_aug_2019
+#' }
+"crime_aug_2019"
