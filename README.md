@@ -83,7 +83,7 @@ The package includes the following functions for downloading open data:
 The package also contains internal fixed data sets. Load these data sets in the usual way `data(transport_mode)`. Currently included data sets:
 
 - `transport_mode` Mode of transportation data from Statistics Canada's 2016 Census. (See: [City of Winnipeg open data](https://dev.socrata.com/foundry/data.winnipeg.ca/ijxa-tybv).)
-- `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 at the DA level. Downloaded using von Bergmann, Shkolnik and Jacobs' [cancensus](https://mountainmath.github.io/cancensus/) package v0.2.0 on 2019-10-01.
+- `census_commute_2019` Census commute data from Statistics Canada for Winnipeg CMA 2019 at the DA level. Downloaded using von Bergmann, Shkolnik and Jacobs's [cancensus](https://mountainmath.github.io/cancensus/) package v0.2.0 on 2019-10-01.
 - `wpg_electoral_wards_2018` Winnipeg electoral wards following 2018 election with shapefile geometries.
 - `neighbourhoods_2017` Boundaries of neighbourhood characterization areas (aka NCA) used to delineate neighbourhoods for city planning purposes.
 - `active_trans_ntwk_2019` Boundaries and data for Winnipeg's active transport cycling network.

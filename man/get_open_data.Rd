@@ -4,23 +4,23 @@
 \alias{get_open_data}
 \title{City of Winnipeg Open Data API}
 \usage{
-get_open_data(type = c("parking", "2018 polling geoms", "air quality",
-  "tax parcels", "trees", "building permits", "plow schedule",
-  "parking bans", "parks", "park assets", "council expenses",
-  "public notices", "mosquito traps", "address coords", "permit details",
-  "burials", "dispositions", "311", "lane closures", "contravention",
-  "vehicle for hire contravention", "parking citations",
-  "ticket adjudication results", "TSI-cameras detail",
-  "TSI-pole and cabinet locations", "TSI-locations",
-  "TSI-corridor box indications detail",      "TSI-corridor boxes detail",
-  "TSI-heads (displays) detail", "TSI-hardware detail",
-  "TSI-pole and arms detail", "TSI-bases detail trans",
-  "TSI-pole and arms detail", "traffic signal malfunctions",
-  "TSI-traffic signal damage", "transport mode", "TMC-confirmed incidents",
-  "transit on-time", "transit on-time hist", "transit pass-ups",
-  "fipa requests", "capex", "river levels", "river james", "survey parcel",
-  "boundary", "population"), app_token = NA, email = NA,
-  password = NA)
+get_open_data(
+  type = c("parking", "2018 polling geoms", "air quality", "tax parcels", "trees",
+    "building permits", "plow schedule", "parking bans", "parks", "park assets",
+    "council expenses", "public notices", "mosquito traps", "address coords",
+    "permit details", "burials", "dispositions", "311", "lane closures", "contravention",
+    "vehicle for hire contravention", "parking citations", "ticket adjudication results",
+    "TSI-cameras detail", "TSI-pole and cabinet locations", "TSI-locations",
+    "TSI-corridor box indications detail",      "TSI-corridor boxes detail",
+    "TSI-heads (displays) detail", "TSI-hardware detail", "TSI-pole and arms detail",
+    "TSI-bases detail trans", "TSI-pole and arms detail", "traffic signal malfunctions",
+    "TSI-traffic signal damage", "transport mode", "TMC-confirmed incidents",
+    "transit on-time", "transit on-time hist", "transit pass-ups", "fipa requests",
+    "capex", "river levels", "river james", "survey parcel", "boundary", "population"),
+  app_token = NA,
+  email = NA,
+  password = NA
+)
 }
 \arguments{
 \item{type}{Specifies with data set to download. Currently supports

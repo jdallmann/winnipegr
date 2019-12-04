@@ -4,9 +4,12 @@
 \alias{wpg_weather}
 \title{Winnipeg Weather}
 \usage{
-wpg_weather(station = c("wpg", "forks", "airport"),
+wpg_weather(
+  station = c("wpg", "forks", "airport"),
   start = as.character(Sys.Date() - 365),
-  end = as.character(Sys.Date()), metric = TRUE)
+  end = as.character(Sys.Date()),
+  metric = TRUE
+)
 }
 \arguments{
 \item{station}{a Winnipeg weather station name in English}

@@ -12,8 +12,8 @@ pulled on 2019-12-02. Original csv names standardized with `janitor`'s
 \item{count}{Number of crimes.}
 \item{level_3_not_displayed}{Description of crime.}
 \item{level_4}{Description of drug offence where applicable.}
-\item{neighnourhoods}{Neigbourhood of crime's occurance.}
-\item{number of records}{Number of records, note can be distinct from count.}
+\item{neighbourhoods}{Neigbourhood of crime's occurance.}
+\item{number_of_records}{Number of records, note can be distinct from count.}
 \item{offence_category}{Offence category.}
 \item{offence}{Specific offence.}
 \item{report_date}{Character string report date in m/d/yyyy format.}

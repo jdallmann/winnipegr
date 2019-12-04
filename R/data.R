@@ -280,8 +280,8 @@
 #' \item{count}{Number of crimes.}
 #' \item{level_3_not_displayed}{Description of crime.}
 #' \item{level_4}{Description of drug offence where applicable.}
-#' \item{neighnourhoods}{Neigbourhood of crime's occurance.}
-#' \item{number of records}{Number of records, note can be distinct from count.}
+#' \item{neighbourhoods}{Neigbourhood of crime's occurance.}
+#' \item{number_of_records}{Number of records, note can be distinct from count.}
 #' \item{offence_category}{Offence category.}
 #' \item{offence}{Specific offence.}
 #' \item{report_date}{Character string report date in m/d/yyyy format.}
@@ -291,3 +291,35 @@
 #'  crime_aug_2019
 #' }
 "crime_aug_2019"
+
+
+#' Yearly incident based crime statistics with detailed violations
+#' for Winnipeg, Manitoba, municipal code 46064 collected by Statistics Canada.
+#' Data ranges from 1998 to 2018, as pulled on 2019-12-02.
+#' Original names standardized with `janitor`'s
+#' `clean_names` function.
+#'
+#' @source Statistics Canada. Table 35-10-0181-01
+#' Incident-based crime statistics, by detailed violations,
+#' police services in Winnipeg, Manitoba.
+#' \url{https://doi.org/10.25318/3510018101-eng}
+#' @format A data frame with 12 columns:
+#' \describe{
+#' \item{ref_date}{Year for which the statistics are compiled.}
+#' \item{dguid}{Statistics Canada region code for Winnipeg municipal region.}
+#' \item{violations}{Type of violation.}
+#' \item{statistics}{Description of incident content.}
+#' \item{uom}{Interpretation of number---number, rate or percent.}
+#' \item{uom_id}{Internal uom id.}
+#' \item{vector}{Statistics Canada vector data identifier.}
+#' \item{coordinate}{Coordinate string.}
+#' \item{value}{Value in question---number rate or percent.}
+#' \item{status}{Status, either NA or "..".}
+#' \item{terminated}{Either NA or TRUE.}
+#' \item{decimals}{Whether the value is recorded to zero or two decimals.}
+#' }
+#' @examples
+#' \dontrun{
+#'  yrly_crime_2018
+#' }
+"yrly_crime_2018"
