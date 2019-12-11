@@ -20,8 +20,9 @@ VignetteBuilder: knitr
 Imports: 
     RSocrata,
     dplyr,
+    jsonlite,
+    lubridate,
     magrittr,
     purrr,
     riem,
-    rjson,
     weathermetrics
