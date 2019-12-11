@@ -5,7 +5,7 @@
 #' and flattens it into a tidy format. The API requires users to register
 #' for an API key.
 #'
-#' @importFrom rjson fromJSON
+#' @importFrom jsonlite fromJSON
 #' @importFrom purrr reduce
 #'
 #' @export
@@ -30,10 +30,10 @@
 #'
 #' @examples
 #' \dontrun{
-#'     get_transit(option_vec = c("lat=49.8951,
-#'         "lon=-97.1384"", "distance=1000",
-#'         "walking=true", "usage=short"),
-#'         api_key = transit_API)
+#' get_transit(option_vec = c("lat=49.8951",
+#'             "lon=-97.1384", "distance=1000",
+#'             "walking=true", "usage=short"),
+#'              api_key = transit_API)
 #' }
 #'
 #'
@@ -74,15 +74,12 @@ get_transit <- function(option_vec = NA,
         paste(option_vec, collapse = "&")
     )
 
-    prsd_json <- rjson::fromJSON(
-        file = api_call
+    prsd_json <- jsonlite::fromJSON(
+        api_call
     )
 
     if(type == "stops" && !purrr::is_empty(prsd_json[[1]])){
-        purrr::reduce(
-            lapply(prsd_json[[1]], stop_flatten),
-            rbind
-        )
+        prsd_json$stops
     } else if(type == "schedule"){
         # Next step...
     } else prsd_json
@@ -92,7 +89,7 @@ get_transit <- function(option_vec = NA,
 #'
 #' The stop_flatten helper-function flattens JSON from
 #' [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3)
-#' into a tidy format.
+#' into a tidy format. For use with rjson::fromJSON.
 #'
 #' @export
 #'
@@ -104,7 +101,7 @@ get_transit <- function(option_vec = NA,
 #' @examples
 #' \dontrun{
 #'     stop_flatten(
-#'          rjson::fromJSON(<API_call>)
+#'          rjson::fromJSON(<API_call_string>)
 #'          )
 #' }
 #'

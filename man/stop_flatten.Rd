@@ -16,12 +16,12 @@ A flattend dataframe containing stops data.
 \description{
 The stop_flatten helper-function flattens JSON from
 [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3)
-into a tidy format.
+into a tidy format. For use with rjson::fromJSON.
 }
 \examples{
 \dontrun{
     stop_flatten(
-         rjson::fromJSON(<API_call>)
+         rjson::fromJSON(<API_call_string>)
          )
 }
 
