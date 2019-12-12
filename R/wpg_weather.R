@@ -21,15 +21,15 @@
 #'
 #' @examples
 #' \dontrun{
-#'     wpg_weather(station = "forks",
+#'     get_weather(station = "forks",
 #'                 start = '2018-01-01',
 #'                 end = '2018-02-28',
 #'                 metric = TRUE)
-#'     wpg_weather(station = "airport",
+#'     get_weather(station = "airport",
 #'                 start = '2018-01-01')
 #' }
 #'
-wpg_weather <- function(station = c("wpg", "forks", "airport"),
+get_weather <- function(station = c("wpg", "forks", "airport"),
                         start = as.character(Sys.Date() - 365),
                         end = as.character(Sys.Date()),
                         metric = TRUE){

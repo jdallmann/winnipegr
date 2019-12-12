@@ -1,9 +1,10 @@
 #' Search Data Sets Available from City of Winnipeg Open Data API
 #'
-#' This function uses the \code{jsonlite} package to get metadata on the
-#' City of Winnipeg Open Data site \code{data.winnipeg.ca}. Returns
-#' a data frame with descriptions of data and code to retrieve data sets
-#' using get_open_data, or through the open data Socrata API.
+#' This function uses the \code{jsonlite} package to get and search/grep current
+#' metadata on the data sets available on the City of Winnipeg Open Data site
+#' \code{data.winnipeg.ca}. It returns a data frame with descriptions of data, and
+#' code to retrieve data sets using get_open_data, or through the open data
+#' Socrata API.
 #'
 #' @importFrom  jsonlite fromJSON
 #' @importFrom  dplyr as_tibble
@@ -40,7 +41,7 @@
 #'     search_open_data(updated_after = '2019-01-01')
 #'
 #'     # Return API short codes for searched data sets
-#'     search_open_data(contains = 'parking')$
+#'     search_open_data(contains = 'parking')$identifier[1]
 #' }
 #'
 search_open_data <- function(contains = NA,

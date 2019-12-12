@@ -4,10 +4,13 @@
 \alias{search_open_data}
 \title{Search Data Sets Available from City of Winnipeg Open Data API}
 \usage{
-search_open_data(contains = NA, updated_after = "2015-01-01",
+search_open_data(
+  contains = NA,
+  updated_after = "2015-01-01",
   updated_before = as.character(Sys.Date()),
   issued_after = "2015-01-01",
-  issued_before = as.character(Sys.Date()))
+  issued_before = as.character(Sys.Date())
+)
 }
 \arguments{
 \item{contains}{Optional expression to grep fields in metadata with.}
@@ -28,10 +31,11 @@ data set being search could have been initially issued.}
 A dataframe containing the open data set(s) matching input parameters.
 }
 \description{
-This function uses the \code{jsonlite} package to get metadata on the
-City of Winnipeg Open Data site \code{data.winnipeg.ca}. Returns
-a data frame with descriptions of data and code to retrieve data sets
-using get_open_data, or through the open data Socrata API.
+This function uses the \code{jsonlite} package to get and search/grep current
+metadata on the data sets available on the City of Winnipeg Open Data site
+\code{data.winnipeg.ca}. It returns a data frame with descriptions of data, and
+code to retrieve data sets using get_open_data, or through the open data
+Socrata API.
 }
 \examples{
 \dontrun{
@@ -46,7 +50,7 @@ using get_open_data, or through the open data Socrata API.
     search_open_data(updated_after = '2019-01-01')
 
     # Return API short codes for searched data sets
-    search_open_data(contains = 'parking')$
+    search_open_data(contains = 'parking')$identifier[1]
 }
 
 }

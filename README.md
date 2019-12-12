@@ -94,22 +94,43 @@ The package also contains internal fixed data sets. Load these data sets in the 
 
 
 ## Examples
-### `wpg_weather`
+### `get_weather`
 This function uses the `reim` package to load Winnipeg
 weather abstracting station names. Measurements have the option to 
 be converted to metric using the `weathermetrics` package.
 
 ``` r
 \dontrun{
-    wpg_weather(station = "forks",
+    get_weather(station = "forks",
         start = '2018-01-01',
         end = '2018-02-28',
         metric = TRUE)
-    wpg_weather(station = "airport",
+    get_weather(station = "airport",
         start = '2018-01-01')
 }
 ```
+### `search_open_data`
+This function uses the `jsonlite` package to get and search/grep current 
+metadata on the data sets available on the City of Winnipeg Open Data site
+`data.winnipeg.ca`. It returns a data frame with descriptions of data, and 
+code to retrieve data sets using get_open_data, or through the open data 
+Socrata API.
+``` r
+\dontrun{
+    # Returns all metadata as a data frame
+    search_open_data()
 
+    # Examines data sets whose title or description contains 'trees'
+    # ignoring case
+    search_open_data('trees')
+
+    # Get recently updated data sets
+    search_open_data(updated_after = '2019-01-01')
+
+    # Return API short codes for searched data sets
+    search_open_data(contains = 'parking')$identifier[1]
+}
+```
 
 ### `get_open_data`
 This function uses the `RSocrata` package to get Winnipeg
@@ -127,7 +148,7 @@ login credentials to have full (non-throttled) access to the API.
 ```
 
 ### `get_transit`
-This function uses the `rjson` package to get Winnipeg
+This function uses the `jsonlite` package to get Winnipeg
 City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants). 
 It also flattens that data from json to a tidy dataframe. 
 Users must have registered for their own (free) API key to use.
