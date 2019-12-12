@@ -25,63 +25,85 @@ The package includes the following functions for downloading open data:
 
 - `get_WPA_Stations` for sourcing available WPA parking station variables such as `available_space`, `hourly_rate`, `timelimit`, location, and others.
 
-- `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. The data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). The `type` parameter takes any valid Winnipeg Open Data identifier code (usually of the form `7cfr-9tgh`), to search these use `search_open_data`. It is also possible to retrieve some data sets using descriptive tags, available options include: 
-    + "parking"
-    + "2018 polling geoms"
-    + "air quality"
-    + "tax parcels"
-    + "trees"
-    + "building permits"
-    + "plow schedule" 
-    + "parking bans"
-    + "parks"
-    + "park assets"
-    + "council expenses"
-    + "public notices"
-    + "mosquito traps"
-    + "address coords"
-    + "permit details"
-    + "burials"
-    + "dispositions"
-    + "311"
-    + "lane closures"
-    + "by-law investigations"
-    + "collection days" 
-    + "311 channels"
-    + "school enrolments"
-    + "river levels"
-    + "waste tonnage"
-    + "web analytics"
-    + "river james"
-    + "contravention"
-    + "TSI-cameras detail"
-    + "TSI-pole and cabinet locations"
-    + "TSI-locations"
-    + "TSI-corridor box indications detail"
-    + "TSI-corridor boxes detail"
-    + "TSI-heads (displays) detail"
-    + "TSI-hardware detail"
-    + "TSI-pole and arms detail"
-    + "TSI-bases detail trans"
-    + "TSI-traffic signal malfunctions"
-    + "TSI-traffic signal damage"
-    + "TMC-confirmed incidents"
-    + "transport mode"
-    + "TMC-confirmed incidents"
-    + "parking citations" 
-    + "ticket adjudication results"
-    + "transit on-time"
-    + "transit on-time hist"
-    + "transit pass-ups"
-    + "fipa requests"
-    + "capex"
-    + "survey parcel"
-    + "boundary"
-    + "population"
+- `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. The data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). The `type` parameter takes any valid Winnipeg Open Data identifier code (usually of the form `7cfr-9tgh`), to search these use `search_open_data`. It is also possible to retrieve some data sets using descriptive tags, available options include:
 
-|Table Attempt | parking | 2018 polling geoms |
-| ------------ | ------- | -----------------  |
-| air quality  | tax parcels | trees          |
+    # + "2018 polling geoms"
+    # + "311"    
+    # + "311 channels"    
+    # + "address coords"
+    # + "air quality"
+    # + "boundary"
+    # + "building permits"
+    # + "burials"    
+    # + "by-law investigations"
+    # + "capex"
+    # + "collection days"  
+    # + "contravention"        
+    # + "council expenses"
+    # + "dispositions"  
+    # + "fipa requests"
+    # + "lane closures"
+    # + "mosquito traps"    
+    # + "park assets"
+    # + "parking"
+    # + "parking bans"
+    # + "parking citations" 
+    # + "parks"
+    # + "permit details"
+    # + "plow schedule"
+    # + "population"
+    # + "public notices"
+    # + "river james"    
+    # + "river levels"    
+    # + "school enrolments"
+    # + "survey parcel"
+    # + "tax parcels"
+    # + "ticket adjudication results"
+    # + "TMC-confirmed incidents"
+    # + "transit on-time"
+    # + "transit on-time hist"
+    # + "transit pass-ups"
+    # + "transport mode"    
+    # + "trees"    
+    # + "TSI-bases detail trans"
+    # + "TSI-cameras detail"
+    # + "TSI-corridor box indications detail"
+    # + "TSI-corridor boxes detail"    
+    # + "TSI-hardware detail"
+    # + "TSI-heads (displays) detail"
+    # + "TSI-locations"
+    # + "TSI-pole and arms detail"
+    # + "TSI-pole and cabinet locations"
+    # + "TSI-traffic signal malfunctions"
+    # + "TSI-traffic signal damage"
+    # + "waste tonnage"
+    # + "web analytics"
+
+| WINNIPEG              | OPEN                  | DATA                  |
+| ------------          | -----------------     | -----------------     |
+|  "2018 polling geoms" |  "park assets"        |  "transit on-time hist"   |
+|  "311"                |  "parking"            |  "transit pass-ups"  |
+|  "311 channels"       |  "parking bans"       |  "transport mode"   |
+|  "address coords"     |  "parking citations"  |  "trees"       |
+|  "air quality"        |  "parks"              |  "TSI-bases detail trans"   |
+|  "boundary"           |  "permit details"     |  "TSI-cameras detail"
+|  "building permits"   |  "plow schedule"      |  "TSI-corridor box indications detail"   |
+|  "burials"            |  "population"         |  "TSI-corridor boxes detail"     |
+|  "by-law investigations" |  "public notices"  |  "TSI-hardware detail"   |
+|  "capex"              |  "river james"        |  "TSI-heads (displays) detail"   |
+|  "collection days"    |  "river levels"       |  "TSI-locations"   |
+|  "contravention"      |  "school enrolments"  |  "TSI-pole and arms detail"   |
+|  "council expenses"   |  "survey parcel"      |  "TSI-pole and cabinet locations"   |
+|  "dispositions"       |  "tax parcels"        |  "TSI-traffic signal malfunctions"   |
+|  "fipa requests"      |  "ticket adjudication results" |  "TSI-traffic signal damage"   |
+|  "lane closures"      |  "TMC-confirmed incidents" |  "waste tonnage"   |
+|  "mosquito traps"     |  "transit on-time"    |  "web analytics"  |
+
+
+
+  
+
+
     
 - `get_transit` provies a wrapper for making calls to the [Winnipeg Transit APIs](https://api.winnipegtransit.com/home/api/v3), and flattens the result into a tidy dataframe. Requires an API key available from [https://api.winnipegtransit.com/home/api/v3](https://api.winnipegtransit.com/home/api/v3). Currently available API `type` options include:
     + "stops" for returning stops near a specified location
