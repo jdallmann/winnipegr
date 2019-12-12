@@ -18,7 +18,7 @@ install.packages("devtools")
 devtools::install_github("jdallmann/winnipegr")
 ```
 
-#Retrieving Data
+# Retrieving Data
 The package includes the following functions for downloading open data:
 
 - `get_weather` for sourcing Winnipeg weather from stations from: Winnipeg 'CXWI', Winnipeg Forks 'CXWN', and Winnipeg International Airport 'CYWG'.
