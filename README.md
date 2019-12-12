@@ -4,7 +4,7 @@ winnipegr
 This R package provides an abstraction layer for easily accessing openly available data sets for Winnipeg, MB, Canada. 
 
 
-#Installation
+# Installation
 
 In the future, you will be able to install the released version of winnipegr from [CRAN](https://CRAN.R-project.org) with:
 
@@ -122,8 +122,8 @@ The package also contains internal fixed data sets. Load these data sets in the 
 - `yrly_crime_2018` Statistics Canada. Table 35-10-0181-01   Incident-based crime statistics, by detailed violations, police services in Winnipeg, Manitoba. Pulled on 2019-12-02 from DOI: [https://doi.org/10.25318/3510018101-eng](https://doi.org/10.25318/3510018101-eng).
 
 
-#Examples
-##`get_weather`
+# Examples
+## `get_weather`
 This function uses the `reim` package to load Winnipeg
 weather abstracting station names. Measurements have the option to 
 be converted to metric using the `weathermetrics` package.
@@ -138,29 +138,29 @@ be converted to metric using the `weathermetrics` package.
         start = '2018-01-01')
 }
 ```
-##`search_open_data`
+## `search_open_data`
 This function uses the `jsonlite` package to get and search/grep current 
 metadata on the data sets available on the City of Winnipeg Open Data site
 `data.winnipeg.ca`. It returns a data frame with descriptions of data, and 
 code to retrieve data sets using get_open_data, or through the open data Socrata API.
 ``` r
 \dontrun{
-    Returns all metadata as a data frame
+    # Returns all metadata as a data frame
     search_open_data()
 
-    Examines data sets whose title or description contains 'trees'
-    ignoring case
+    # Examines data sets whose title or description contains 'trees'
+    # ignoring case
     search_open_data('trees')
 
-    Get recently updated data sets
+    # Get recently updated data sets
     search_open_data(updated_after = '2019-01-01')
 
-    Return API short codes for searched data sets
+    # Return API short codes for searched data sets
     search_open_data(contains = 'parking')$identifier[1]
 }
 ```
 
-##`get_open_data`
+## `get_open_data`
 This function uses the `RSocrata` package to get Winnipeg
 City data from the Winnipeg Open Data site `data.winnipeg.ca`.
 Users with a City of Winnipeg open data account can also use their
@@ -177,7 +177,7 @@ login credentials to have full (non-throttled) access to the API.
 }
 ```
 
-##`get_transit`
+## `get_transit`
 This function uses the `jsonlite` package to get Winnipeg
 City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants). 
 It also flattens that data from json to a tidy dataframe. 
