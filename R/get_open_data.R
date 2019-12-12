@@ -60,9 +60,12 @@
 #' @examples
 #' \dontrun{
 #'     get_open_data("trees")
+#'
 #'     get_open_data("parking", app_token = SOME_API_TOKEN,
 #'         email = FAKE_EMAIL,
 #'         password = FAKE_PASSWORD)
+#'
+#'     get_open_data(search_open_data("clerk")$identifier[1])
 #' }
 #'
 get_open_data <- function(type = c("parking", "2018 polling geoms",
@@ -95,7 +98,7 @@ get_open_data <- function(type = c("parking", "2018 polling geoms",
                           app_token = NA,
                           email = NA,
                           password  = NA){
-    type <- match.arg(type)
+    # type <- match.arg(type)
     # library(RSocrata)
     if(!requireNamespace("RSocrata", quietly = TRUE)){
         stop("The 'RSocrata' package needs to be installed first")

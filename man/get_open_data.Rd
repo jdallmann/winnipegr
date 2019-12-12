@@ -83,9 +83,12 @@ login credentials to have full (non-throttled) access to the API.
 \examples{
 \dontrun{
     get_open_data("trees")
+
     get_open_data("parking", app_token = SOME_API_TOKEN,
         email = FAKE_EMAIL,
         password = FAKE_PASSWORD)
+
+    get_open_data(search_open_data("clerk")$identifier[1])
 }
 
 }

@@ -113,8 +113,7 @@ be converted to metric using the `weathermetrics` package.
 This function uses the `jsonlite` package to get and search/grep current 
 metadata on the data sets available on the City of Winnipeg Open Data site
 `data.winnipeg.ca`. It returns a data frame with descriptions of data, and 
-code to retrieve data sets using get_open_data, or through the open data 
-Socrata API.
+code to retrieve data sets using get_open_data, or through the open data Socrata API.
 ``` r
 \dontrun{
     # Returns all metadata as a data frame
@@ -140,10 +139,12 @@ login credentials to have full (non-throttled) access to the API.
 ``` r
 \dontrun{
     get_open_data("parking", app_token = SOME_API_TOKEN,
-    email = FAKE_EMAIL,
-    password = FAKE_PASSWORD)
-\dontrun{
+                  email = FAKE_EMAIL,
+                  password = FAKE_PASSWORD)
+    
     get_open_data("river james")
+    
+    get_open_data(search_open_data("clerk")$identifier[1])
 }
 ```
 
