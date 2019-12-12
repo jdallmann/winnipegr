@@ -101,7 +101,7 @@
 #' }
 #' @examples
 #' \dontrun{
-#'  transport_mode
+#'  wpg_electoral_wards_2018
 #' }
 "wpg_electoral_wards_2018"
 
@@ -117,11 +117,10 @@
 #'  \item{id}{Neighbourhood id number.}
 #'  \item{name}{Neighbourhood name.}
 #'  \item{geometry}{Neighbourhood shapefile geometry.}
-
 #' }
 #' @examples
 #' \dontrun{
-#'  transport_mode
+#'  neighbourhoods_2017
 #' }
 "neighbourhoods_2017"
 
@@ -140,7 +139,6 @@
 #'  \item{type}{Type of network.}
 #'  \item{ward}{Ward name.}
 #'  \item{geometry}{Shapefile geometry for network path.}
-
 #' }
 #' @examples
 #' \dontrun{
@@ -269,8 +267,8 @@
 
 
 #' Winnipeg police crime historical crime statistics up to August 2019
-#' pulled on 2019-12-02. Original csv names standardized with `janitor`'s
-#' `clean_names` function. Descriptions are my best guess.
+#' pulled on 2019-12-02. Original csv names standardized with \code{janitor}'s
+#' \code{clean_names} function. Descriptions are my best guess.
 #'
 #' @source Winnipeg police crime map for public use
 #' \url{https://www.winnipeg.ca/police/crimestat/viewMap.stm}
@@ -296,8 +294,8 @@
 #' Yearly incident based crime statistics with detailed violations
 #' for Winnipeg, Manitoba, municipal code 46064 collected by Statistics Canada.
 #' Data ranges from 1998 to 2018, as pulled on 2019-12-02.
-#' Original names standardized with `janitor`'s
-#' `clean_names` function.
+#' Original names standardized with \code{janitor}'s
+#' \code{clean_names} function.
 #'
 #' @source Statistics Canada. Table 35-10-0181-01
 #' Incident-based crime statistics, by detailed violations,

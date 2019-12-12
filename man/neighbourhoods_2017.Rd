@@ -26,7 +26,7 @@ to delineate neighbourhoods for city planning purposes.
 }
 \examples{
 \dontrun{
- transport_mode
+ neighbourhoods_2017
 }
 }
 \keyword{datasets}

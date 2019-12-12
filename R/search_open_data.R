@@ -1,6 +1,6 @@
 #' Search Data Sets Available from City of Winnipeg Open Data API
 #'
-#' This function uses the \code{rjson} package to get metadata on the
+#' This function uses the \code{jsonlite} package to get metadata on the
 #' City of Winnipeg Open Data site \code{data.winnipeg.ca}. Returns
 #' a data frame with descriptions of data and code to retrieve data sets
 #' using get_open_data, or through the open data Socrata API.

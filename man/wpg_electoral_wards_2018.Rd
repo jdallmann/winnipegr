@@ -25,7 +25,7 @@ Winnipeg 2018 Electoral Wards
 }
 \examples{
 \dontrun{
- transport_mode
+ wpg_electoral_wards_2018
 }
 }
 \keyword{datasets}

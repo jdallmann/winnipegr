@@ -4,14 +4,8 @@
 \alias{get_transit}
 \title{Winnipeg Transit API}
 \usage{
-get_transit(
-  option_vec = NA,
-  stop = NA,
-  route = NA,
-  type = "stops",
-  api_key = NA,
-  ...
-)
+get_transit(option_vec = NA, stop = NA, route = NA, type = "stops",
+  api_key = NA, ...)
 }
 \arguments{
 \item{option_vec}{Optional vector of options for API call. See

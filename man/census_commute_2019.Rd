@@ -4,7 +4,7 @@
 \name{census_commute_2019}
 \alias{census_commute_2019}
 \title{Census commute data for Winnipeg CMA 2019 at the DA level.}
-\format{}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1229 rows and 27 columns.}
 \source{
 Statistics Canada via (cancensus)[https://mountainmath.github.io/cancensus/articles/cancensus.html] package.
 \url{https://cran.r-project.org/web/packages/cancensus/index.html}
