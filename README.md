@@ -80,7 +80,7 @@ The package includes the following functions for downloading open data:
     + "web analytics"
 --->
 
-| WINNIPEG              | OPEN                  | DATA                  |
+| WINNIPEG              | OPEN DATA             | TAGS                  |
 | ------------          | -----------------     | -----------------     |
 |  "2018 polling geoms" |  "park assets"        |  "transit on-time hist"   |
 |  "311"                |  "parking"            |  "transit pass-ups"  |
