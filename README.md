@@ -25,7 +25,7 @@ The package includes the following functions for downloading open data:
 
 - `get_WPA_Stations` for sourcing available WPA parking station variables such as `available_space`, `hourly_rate`, `timelimit`, location, and others.
 
-- `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. The data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). The `type` parameter takes any valid Winnipeg Open Data identifier code (usually of the form `7cfr-9tgh`), to search these use `search_open_data`. It is also possible to retrieve some data sets using descriptive tags, available options include:
+- `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. The data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). The `type` parameter takes any valid Winnipeg Open Data identifier code (usually of the form `7cfr-9tgh`), to search these use `search_open_data`. It is also possible to retrieve some data sets using descriptive argument strings, available options include:
 <!---
     + "2018 polling geoms"
     + "311"
@@ -80,7 +80,7 @@ The package includes the following functions for downloading open data:
     + "web analytics"
 --->
 
-| WINNIPEG              | OPEN DATA             | TAGS                  |
+| DESCRIPTIVE           | get_open_data         | ARGUMENT STRINGS      |
 | ------------          | -----------------     | -----------------     |
 |  "2018 polling geoms" |  "park assets"        |  "transit on-time hist"   |
 |  "311"                |  "parking"            |  "transit pass-ups"  |
