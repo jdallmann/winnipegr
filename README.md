@@ -1,10 +1,10 @@
-# winnipegr
+winnipegr
 [![Travis build status](https://travis-ci.org/jdallmann/winnipegr.svg?branch=master)](https://travis-ci.org/jdallmann/winnipegr) 
 
 This R package provides an abstraction layer for easily accessing openly available data sets for Winnipeg, MB, Canada. 
 
 
-## Installation
+#Installation
 
 In the future, you will be able to install the released version of winnipegr from [CRAN](https://CRAN.R-project.org) with:
 
@@ -18,7 +18,7 @@ install.packages("devtools")
 devtools::install_github("jdallmann/winnipegr")
 ```
 
-## Retrieving Data
+#Retrieving Data
 The package includes the following functions for downloading open data:
 
 - `get_weather` for sourcing Winnipeg weather from stations from: Winnipeg 'CXWI', Winnipeg Forks 'CXWN', and Winnipeg International Airport 'CYWG'.
@@ -26,58 +26,59 @@ The package includes the following functions for downloading open data:
 - `get_WPA_Stations` for sourcing available WPA parking station variables such as `available_space`, `hourly_rate`, `timelimit`, location, and others.
 
 - `get_open_data` a wrapper for calling City of Winnipeg open data (https://data.winnipeg.ca/) using descriptive data set identifiers. The data is provided under [the Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada). The `type` parameter takes any valid Winnipeg Open Data identifier code (usually of the form `7cfr-9tgh`), to search these use `search_open_data`. It is also possible to retrieve some data sets using descriptive tags, available options include:
-
-    # + "2018 polling geoms"
-    # + "311"    
-    # + "311 channels"    
-    # + "address coords"
-    # + "air quality"
-    # + "boundary"
-    # + "building permits"
-    # + "burials"    
-    # + "by-law investigations"
-    # + "capex"
-    # + "collection days"  
-    # + "contravention"        
-    # + "council expenses"
-    # + "dispositions"  
-    # + "fipa requests"
-    # + "lane closures"
-    # + "mosquito traps"    
-    # + "park assets"
-    # + "parking"
-    # + "parking bans"
-    # + "parking citations" 
-    # + "parks"
-    # + "permit details"
-    # + "plow schedule"
-    # + "population"
-    # + "public notices"
-    # + "river james"    
-    # + "river levels"    
-    # + "school enrolments"
-    # + "survey parcel"
-    # + "tax parcels"
-    # + "ticket adjudication results"
-    # + "TMC-confirmed incidents"
-    # + "transit on-time"
-    # + "transit on-time hist"
-    # + "transit pass-ups"
-    # + "transport mode"    
-    # + "trees"    
-    # + "TSI-bases detail trans"
-    # + "TSI-cameras detail"
-    # + "TSI-corridor box indications detail"
-    # + "TSI-corridor boxes detail"    
-    # + "TSI-hardware detail"
-    # + "TSI-heads (displays) detail"
-    # + "TSI-locations"
-    # + "TSI-pole and arms detail"
-    # + "TSI-pole and cabinet locations"
-    # + "TSI-traffic signal malfunctions"
-    # + "TSI-traffic signal damage"
-    # + "waste tonnage"
-    # + "web analytics"
+<!---
+    + "2018 polling geoms"
+    + "311"
+    + "311 channels"
+    + "address coords"
+    + "air quality"
+    + "boundary"
+    + "building permits"
+    + "burials"
+    + "by-law investigations"
+    + "capex"
+    + "collection days"
+    + "contravention"
+    + "council expenses"
+    + "dispositions"
+    + "fipa requests"
+    + "lane closures"
+    + "mosquito traps"
+    + "park assets"
+    + "parking"
+    + "parking bans"
+    + "parking citations"
+    + "parks"
+    + "permit details"
+    + "plow schedule"
+    + "population"
+    + "public notices"
+    + "river james"
+    + "river levels"
+    + "school enrolments"
+    + "survey parcel"
+    + "tax parcels"
+    + "ticket adjudication results"
+    + "TMC-confirmed incidents"
+    + "transit on-time"
+    + "transit on-time hist"
+    + "transit pass-ups"
+    + "transport mode"
+    + "trees"
+    + "TSI-bases detail trans"
+    + "TSI-cameras detail"
+    + "TSI-corridor box indications detail"
+    + "TSI-corridor boxes detail"
+    + "TSI-hardware detail"
+    + "TSI-heads (displays) detail"
+    + "TSI-locations"
+    + "TSI-pole and arms detail"
+    + "TSI-pole and cabinet locations"
+    + "TSI-traffic signal malfunctions"
+    + "TSI-traffic signal damage"
+    + "waste tonnage"
+    + "web analytics"
+--->
 
 | WINNIPEG              | OPEN                  | DATA                  |
 | ------------          | -----------------     | -----------------     |
@@ -121,8 +122,8 @@ The package also contains internal fixed data sets. Load these data sets in the 
 - `yrly_crime_2018` Statistics Canada. Table 35-10-0181-01   Incident-based crime statistics, by detailed violations, police services in Winnipeg, Manitoba. Pulled on 2019-12-02 from DOI: [https://doi.org/10.25318/3510018101-eng](https://doi.org/10.25318/3510018101-eng).
 
 
-## Examples
-### `get_weather`
+#Examples
+##`get_weather`
 This function uses the `reim` package to load Winnipeg
 weather abstracting station names. Measurements have the option to 
 be converted to metric using the `weathermetrics` package.
@@ -137,29 +138,29 @@ be converted to metric using the `weathermetrics` package.
         start = '2018-01-01')
 }
 ```
-### `search_open_data`
+##`search_open_data`
 This function uses the `jsonlite` package to get and search/grep current 
 metadata on the data sets available on the City of Winnipeg Open Data site
 `data.winnipeg.ca`. It returns a data frame with descriptions of data, and 
 code to retrieve data sets using get_open_data, or through the open data Socrata API.
 ``` r
 \dontrun{
-    # Returns all metadata as a data frame
+    Returns all metadata as a data frame
     search_open_data()
 
-    # Examines data sets whose title or description contains 'trees'
-    # ignoring case
+    Examines data sets whose title or description contains 'trees'
+    ignoring case
     search_open_data('trees')
 
-    # Get recently updated data sets
+    Get recently updated data sets
     search_open_data(updated_after = '2019-01-01')
 
-    # Return API short codes for searched data sets
+    Return API short codes for searched data sets
     search_open_data(contains = 'parking')$identifier[1]
 }
 ```
 
-### `get_open_data`
+##`get_open_data`
 This function uses the `RSocrata` package to get Winnipeg
 City data from the Winnipeg Open Data site `data.winnipeg.ca`.
 Users with a City of Winnipeg open data account can also use their
@@ -176,7 +177,7 @@ login credentials to have full (non-throttled) access to the API.
 }
 ```
 
-### `get_transit`
+##`get_transit`
 This function uses the `jsonlite` package to get Winnipeg
 City Transit data from the [Winnipeg Transit API v3](https://api.winnipegtransit.com/home/api/v3/services/variants). 
 It also flattens that data from json to a tidy dataframe. 
