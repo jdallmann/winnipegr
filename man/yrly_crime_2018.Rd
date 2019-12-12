@@ -6,8 +6,8 @@
 \title{Yearly incident based crime statistics with detailed violations
 for Winnipeg, Manitoba, municipal code 46064 collected by Statistics Canada.
 Data ranges from 1998 to 2018, as pulled on 2019-12-02.
-Original names standardized with \code{janitor}'s
-\code{clean_names} function.}
+Original names standardized with the \code{janitor::clean_names}
+function.}
 \format{A data frame with 12 columns:
 \describe{
 \item{ref_date}{Year for which the statistics are compiled.}
@@ -36,8 +36,8 @@ yrly_crime_2018
 Yearly incident based crime statistics with detailed violations
 for Winnipeg, Manitoba, municipal code 46064 collected by Statistics Canada.
 Data ranges from 1998 to 2018, as pulled on 2019-12-02.
-Original names standardized with \code{janitor}'s
-\code{clean_names} function.
+Original names standardized with the \code{janitor::clean_names}
+function.
 }
 \examples{
 \dontrun{

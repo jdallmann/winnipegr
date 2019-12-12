@@ -4,8 +4,8 @@
 \name{crime_aug_2019}
 \alias{crime_aug_2019}
 \title{Winnipeg police crime historical crime statistics up to August 2019
-pulled on 2019-12-02. Original csv names standardized with \code{janitor}'s
-\code{clean_names} function. Descriptions are my best guess.}
+pulled on 2019-12-02. Original csv names standardized with  the
+\code{janitor::clean_names} function. Descriptions are my best guess.}
 \format{A data frame with 9 columns:
 \describe{
 \item{community}{Community.}
@@ -27,8 +27,8 @@ crime_aug_2019
 }
 \description{
 Winnipeg police crime historical crime statistics up to August 2019
-pulled on 2019-12-02. Original csv names standardized with \code{janitor}'s
-\code{clean_names} function. Descriptions are my best guess.
+pulled on 2019-12-02. Original csv names standardized with  the
+\code{janitor::clean_names} function. Descriptions are my best guess.
 }
 \examples{
 \dontrun{
