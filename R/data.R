@@ -336,6 +336,7 @@
 #' \describe{
 #' \item{measure_type_cd}{MBNC classification of measurement.}
 #' \item{municipality_id}{MBNC unique municipality identifier.}
+#' \item{fiscal_year}{Fiscal year of measurement.}
 #' \item{program_area}{MBNC classification of measurement area.}
 #' \item{municipality}{Name of municipality.}
 #' \item{section_desc}{MBNC desciption of of measurement area.}
