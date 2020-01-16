@@ -52,9 +52,9 @@ function.
 }
 \dontrun{
 # To tidy the dataset & remove notes
-tidy_mbnc <- long_MBNC \%>\%
-select(municipality, fiscal_year, measure, result) \%>\%
-pivot_wider(names_from = measure, values_from = result)
+tidy_mbnc <- winnipegr::mbnc \%>\%
+    select(municipality, fiscal_year, measure, result) \%>\%
+    pivot_wider(names_from = measure, values_from = result)
 }
 }
 \keyword{datasets}
