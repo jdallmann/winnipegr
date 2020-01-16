@@ -120,6 +120,7 @@ The package also contains internal fixed data sets. Load these data sets in the 
 - `census_DA_2019` Boundary shape file with id for Statistics Canada 2019 DA data. Downloaded using von Bergmann, Shkolnik and Jacobs' [cancensus](https://mountainmath.github.io/cancensus/) package v0.2.0 on 2019-10-01.
 - `crime_aug_2019` Winnipeg police crime statistics pulled on 2019-12-02 from [here](https://www.winnipeg.ca/police/crimestat/viewMap.stm).
 - `yrly_crime_2018` Statistics Canada. Table 35-10-0181-01   Incident-based crime statistics, by detailed violations, police services in Winnipeg, Manitoba. Pulled on 2019-12-02 from DOI: [https://doi.org/10.25318/3510018101-eng](https://doi.org/10.25318/3510018101-eng).
+- `mbnc` Municipal Benchmarking Network Canada (MBNC) dataset. Data pulled from [mbnc](http://mbncanada.ca/) on 2019-12-27.
 
 
 # Examples
